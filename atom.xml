@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.rookiehacker.org/"/>
-  <updated>2018-02-28T14:57:43.894Z</updated>
+  <updated>2018-03-03T08:15:52.020Z</updated>
   <id>http://blog.rookiehacker.org/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【版本更新】对博客的一次更新升级</title>
+    <link href="http://blog.rookiehacker.org/2018/03/03/blogupdate/"/>
+    <id>http://blog.rookiehacker.org/2018/03/03/blogupdate/</id>
+    <published>2018-03-03T07:42:13.000Z</published>
+    <updated>2018-03-03T08:15:52.020Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2008167723&auto=0&height=430"></iframe><hr><h2 id="Hexo升级-主题更新"><a href="#Hexo升级-主题更新" class="headerlink" title="Hexo升级 主题更新"></a>Hexo升级 主题更新</h2><h3 id="先说升级"><a href="#先说升级" class="headerlink" title="先说升级"></a>先说升级</h3><p>因为之前对Hexo做了很多个性化的设置（详情请看<a href="http://blog.rookiehacker.org/2017/01/28/hexo-themes/">这里</a>），并且时间已经过去很久了，到底改了什么地方我也忘记了，改的大多还是一些边边角角的小地方，所以干脆就升级了一下Hexo，其实就是重新安装了一遍。。。npm升级到了5.7.1，node.js升级到了v6.9.1，都是最新版本，下面是Hexo升级后的信息</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hexo: 3.6.0</span><br><span class="line">hexo-cli: 1.1.0</span><br><span class="line">os: Windows_NT 10.0.16299 win32 x64</span><br><span class="line">http_parser: 2.7.0</span><br><span class="line">node: 6.9.1</span><br><span class="line">v8: 5.1.281.84</span><br><span class="line">uv: 1.9.1</span><br><span class="line">zlib: 1.2.8</span><br><span class="line">ares: 1.10.1-DEV</span><br><span class="line">icu: 57.1</span><br><span class="line">modules: 48</span><br><span class="line">openssl: 1.0.2j</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>然后就直接把<code>public</code>和<code>source</code>文件夹给复制过去了。</p><h3 id="再说更新"><a href="#再说更新" class="headerlink" title="再说更新"></a>再说更新</h3><p>看了一下<a href="https://www.haomwei.com/technology/maupassant-hexo.html" target="_blank" rel="noopener">屠夫9441的博客</a>，发现maupassant主题也已经更新了，并且更新了一些接入评论的API，正好博客评论也关了很长时间了，直接下载新主题！具体步骤看<a href="https://www.haomwei.com/technology/maupassant-hexo.html" target="_blank" rel="noopener">这里</a>。但是更新之后自己的博客图标却怎么都显示不出来。。。不知道是什么bug。。</p><h2 id="添加畅言评论系统"><a href="#添加畅言评论系统" class="headerlink" title="添加畅言评论系统"></a>添加畅言评论系统</h2><p>更新maupassant主题后添加畅言也就直接添加畅言的APP ID和APP KEY的事，在<code>maupassant</code>下的<code>_config.yml</code>中直接添加即可。关于如何注册使用畅言就不多少了，网上都有。哇~评论终于回来啦！</p><h2 id="欢迎加入我的tg群组"><a href="#欢迎加入我的tg群组" class="headerlink" title="欢迎加入我的tg群组"></a>欢迎加入我的tg群组</h2><p>为什么选择tg就不多说了，下面是邀请链接，直接扫码吧！<br><img src="http://ojzr7go2m.bkt.clouddn.com/blog/20180303/151318226.png" alt="扫码加入我的telegram群组"></p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2018/03/03/blogupdate/" title="【版本更新】对博客的一次更新升级">【版本更新】对博客的一次更新升级</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2018/03/03/blogupdate/" title="【版本更新】对博客的一次更新升级">http://blog.rookiehacker.org/2018/03/03/blogupdate/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      对博客做了一次版本升级，并且加上了畅言的评论系统。
+    
+    </summary>
+    
+      <category term="Hexo" scheme="http://blog.rookiehacker.org/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="http://blog.rookiehacker.org/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>【电影推荐】推荐两部电影标志回归Blog</title>
@@ -469,30 +491,6 @@
       <category term="Brainfuck" scheme="http://blog.rookiehacker.org/tags/Brainfuck/"/>
     
       <category term="语言" scheme="http://blog.rookiehacker.org/tags/%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【实习生活】实习生活第六天</title>
-    <link href="http://blog.rookiehacker.org/2017/06/23/sixth-day-in-Beijing/"/>
-    <id>http://blog.rookiehacker.org/2017/06/23/sixth-day-in-Beijing/</id>
-    <published>2017-06-23T00:35:05.000Z</published>
-    <updated>2017-06-23T12:44:31.548Z</updated>
-    
-    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=2001320&auto=0&height=66"></iframe><h1 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h1><p>今天没怎么学习心得知识，知识利用这几天所学，结合网上的一个框架，自己按照自己的风格修改了一下，修修补补，赢别人做好的轮子就是爽啊，看着1000多行的CSS代码心里就发慌，让自己写估计几百行脑子就彻底乱套了。。。<br>估计最后的作业也是这个，前端修修改改就OK了，剩下的就是后端了，后端方面，下个星期开始学习Java！继续加油！</p><h1 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h1><p>下午更轻松了，因为马上就周末了，老师特别有心地给介绍了一下北京的好玩的好吃的，以及叮嘱了一下周末出行的安全问题，然后就放了一个视频，《互联网时代》，感觉是不不错的介绍哦互联网历史的纪录片，可惜自己就看了半个小时吧就睡着了，醒来视频刚好放完。。。然后接着就继续修改网页。。还有改了个小的HTML+jQuery的爱心墙网页O(∩_∩)O~希望下周继续加油！！</p><h1 id="晚上"><a href="#晚上" class="headerlink" title="晚上"></a>晚上</h1><p>一如既往的写博客、看书！加油↖(^ω^)↗</p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2017/06/23/sixth-day-in-Beijing/" title="【实习生活】实习生活第六天">【实习生活】实习生活第六天</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2017/06/23/sixth-day-in-Beijing/" title="【实习生活】实习生活第六天">http://blog.rookiehacker.org/2017/06/23/sixth-day-in-Beijing/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
-    
-    <summary type="html">
-    
-      不知不觉，课程已经进行了一周时间了，回想一下，确实有收获，O(∩_∩)O哈哈~这就足够了！
-    
-    </summary>
-    
-      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="实习" scheme="http://blog.rookiehacker.org/tags/%E5%AE%9E%E4%B9%A0/"/>
     
   </entry>
   
