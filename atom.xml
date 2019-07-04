@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.rookiehacker.org/"/>
-  <updated>2019-07-04T16:29:32.987Z</updated>
+  <updated>2019-07-04T16:37:51.340Z</updated>
   <id>http://blog.rookiehacker.org/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://blog.rookiehacker.org/2019/07/05/djangouploadfile/"/>
     <id>http://blog.rookiehacker.org/2019/07/05/djangouploadfile/</id>
     <published>2019-07-04T16:24:28.000Z</published>
-    <updated>2019-07-04T16:29:32.987Z</updated>
+    <updated>2019-07-04T16:37:51.340Z</updated>
     
     <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>/<em>更换了电脑硬盘，先测试一下迁移效果~真坑，改日再填~</em>/<br>某日，xxxxxxx</p><h1 id="关于上传"><a href="#关于上传" class="headerlink" title="关于上传"></a>关于上传</h1><p>Django的文件上传，xxxxxx</p><h1 id="关于深浅copy"><a href="#关于深浅copy" class="headerlink" title="关于深浅copy"></a>关于深浅copy</h1><h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><p><code>copy.copy</code>,xxxxxx</p><h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><p><code>copy.deepcopy</code>,xxxxxxxxx</p><h1 id="关于zipfile"><a href="#关于zipfile" class="headerlink" title="关于zipfile"></a>关于zipfile</h1><p><code>zipfile.ZipFile(&#39;xxxx.zip&#39;)</code><br><code>zipfile.is_zipfile(&#39;xxxxx.zip&#39;)</code></p><h1 id="处理方案"><a href="#处理方案" class="headerlink" title="处理方案"></a>处理方案</h1><p>file.seek(0, 0)</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>深浅拷贝<br>zipfile<br>Django文件上传<br>文件指针<br>…</p>]]></content>
     
@@ -30,6 +30,8 @@
       项目开发过程中用到了Django中的文件上传模块，结果测试的时候发现了bug，处理了一下，对于文件上传和Python的copy又有了新的了解~
     
     </summary>
+    
+      <category term="Python" scheme="http://blog.rookiehacker.org/categories/Python/"/>
     
     
       <category term="Python" scheme="http://blog.rookiehacker.org/tags/Python/"/>
