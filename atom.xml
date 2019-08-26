@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.rookiehacker.org/"/>
-  <updated>2019-07-04T16:37:51.340Z</updated>
+  <updated>2019-08-26T15:00:10.595Z</updated>
   <id>http://blog.rookiehacker.org/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hi!我爱你！</title>
+    <link href="http://blog.rookiehacker.org/2019/08/11/mylovestory/"/>
+    <id>http://blog.rookiehacker.org/2019/08/11/mylovestory/</id>
+    <published>2019-08-11T14:33:55.000Z</published>
+    <updated>2019-08-26T15:00:10.595Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=27552499&auto=1&height=66"></iframe><h1 id="起点"><a href="#起点" class="headerlink" title="起点"></a>起点</h1><p>2019年7月27日</p><h1 id="相见"><a href="#相见" class="headerlink" title="相见"></a>相见</h1><p>2019年8月11日<br><img src="http://rookiehacker.org:8888/images/2019/08/26/afdc4b01c431c48630b5e4e7e0153cc4.jpg" alt="于西子湖畔"></p><h1 id="我爱你！"><a href="#我爱你！" class="headerlink" title="我爱你！"></a>我爱你！</h1><p>小锦子！我爱你！</p><h1 id="没有终点"><a href="#没有终点" class="headerlink" title="没有终点"></a>没有终点</h1><p>余生请多多指教~<br><img src="http://rookiehacker.org:8888/images/2019/08/26/2aa90e0e81997d9fa6a35c7c64ab3355.jpg" alt="执子之手，与子偕老"></p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2019/08/11/mylovestory/" title="Hi!我爱你！">Hi!我爱你！</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2019/08/11/mylovestory/" title="Hi!我爱你！">http://blog.rookiehacker.org/2019/08/11/mylovestory/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      余生请多多指教~
+    
+    </summary>
+    
+      <category term="我的爱情故事" scheme="http://blog.rookiehacker.org/categories/%E6%88%91%E7%9A%84%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B/"/>
+    
+    
+      <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="情感" scheme="http://blog.rookiehacker.org/tags/%E6%83%85%E6%84%9F/"/>
+    
+      <category term="爱情" scheme="http://blog.rookiehacker.org/tags/%E7%88%B1%E6%83%85/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Django中文件上传的小坑[WIP]</title>
     <link href="http://blog.rookiehacker.org/2019/07/05/djangouploadfile/"/>
     <id>http://blog.rookiehacker.org/2019/07/05/djangouploadfile/</id>
     <published>2019-07-04T16:24:28.000Z</published>
-    <updated>2019-07-04T16:37:51.340Z</updated>
+    <updated>2019-08-26T14:51:21.064Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>/<em>更换了电脑硬盘，先测试一下迁移效果~真坑，改日再填~</em>/<br>某日，xxxxxxx</p><h1 id="关于上传"><a href="#关于上传" class="headerlink" title="关于上传"></a>关于上传</h1><p>Django的文件上传，xxxxxx</p><h1 id="关于深浅copy"><a href="#关于深浅copy" class="headerlink" title="关于深浅copy"></a>关于深浅copy</h1><h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><p><code>copy.copy</code>,xxxxxx</p><h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><p><code>copy.deepcopy</code>,xxxxxxxxx</p><h1 id="关于zipfile"><a href="#关于zipfile" class="headerlink" title="关于zipfile"></a>关于zipfile</h1><p><code>zipfile.ZipFile(&#39;xxxx.zip&#39;)</code><br><code>zipfile.is_zipfile(&#39;xxxxx.zip&#39;)</code></p><h1 id="处理方案"><a href="#处理方案" class="headerlink" title="处理方案"></a>处理方案</h1><p>file.seek(0, 0)</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>深浅拷贝<br>zipfile<br>Django文件上传<br>文件指针<br>…</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>/<em>更换了电脑硬盘，先测试一下迁移效果~真坑，改日再填~</em>/<br>某日，项目开发过程中，有一部分要涉及到文件的上传，由于项目是使用Django框架搭建的，所以这里看到做这个模块的前辈（此时这位前辈应该已经调到别的组去了。。），直接使用的Django的文件上传模块。可能是一开始只是为了实现文件上传功能吧，看到前辈的代码并没有具体考虑上传过程中的各种具体情况，只是好心地在旁边注释了一下深拷贝和浅拷贝的问题。项目接受后</p><h1 id="关于上传"><a href="#关于上传" class="headerlink" title="关于上传"></a>关于上传</h1><p>Django的文件上传，xxxxxx</p><h1 id="关于深浅copy"><a href="#关于深浅copy" class="headerlink" title="关于深浅copy"></a>关于深浅copy</h1><h2 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h2><p><code>copy.copy</code>,xxxxxx</p><h2 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h2><p><code>copy.deepcopy</code>,xxxxxxxxx</p><h1 id="关于zipfile"><a href="#关于zipfile" class="headerlink" title="关于zipfile"></a>关于zipfile</h1><p><code>zipfile.ZipFile(&#39;xxxx.zip&#39;)</code><br><code>zipfile.is_zipfile(&#39;xxxxx.zip&#39;)</code></p><h1 id="处理方案"><a href="#处理方案" class="headerlink" title="处理方案"></a>处理方案</h1><p>file.seek(0, 0)</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>深浅拷贝<br>zipfile<br>Django文件上传<br>文件指针<br>…</p>]]></content>
     
     <summary type="html">
     
@@ -464,30 +490,6 @@
     <summary type="html">
     
       最后这几天有点忙，博客合成一天来写吧。。。忙了最后三天，要项目答辩了。。
-    
-    </summary>
-    
-      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="实习" scheme="http://blog.rookiehacker.org/tags/%E5%AE%9E%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【实习生活】实习生活第二十天</title>
-    <link href="http://blog.rookiehacker.org/2017/07/07/twentieth-day-in-Beijing/"/>
-    <id>http://blog.rookiehacker.org/2017/07/07/twentieth-day-in-Beijing/</id>
-    <published>2017-07-07T12:24:23.000Z</published>
-    <updated>2017-07-07T14:14:37.914Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h1><p>任务基本上都完成了，基本功能以及扩展功能也基本上都实现了，因为上午上的是CEP（职业生涯规划课），没什么意思，就在自己网站程序上添加了一个2048。。本来只是想测试一下。。结果玩起来就没停下。。。。。</p><h1 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h1><p>中午听了个在京东的师姐的讲座，然后又在网站上加了个地图导航的功能，又修改了一下评论显示的那段代码，效果是只显示最近五条评论。。。然后就继续2048.。。。。。</p><h1 id="晚上"><a href="#晚上" class="headerlink" title="晚上"></a>晚上</h1><p>没什么事，继续测试了一下程序。。。</p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2017/07/07/twentieth-day-in-Beijing/" title="【实习生活】实习生活第二十天">【实习生活】实习生活第二十天</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2017/07/07/twentieth-day-in-Beijing/" title="【实习生活】实习生活第二十天">http://blog.rookiehacker.org/2017/07/07/twentieth-day-in-Beijing/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
-    
-    <summary type="html">
-    
-      今天好轻松，不过有点无聊。。。。（所以水一篇。。）
     
     </summary>
     
