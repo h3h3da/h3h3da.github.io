@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.rookiehacker.org/"/>
-  <updated>2019-11-12T05:43:35.268Z</updated>
+  <updated>2019-11-13T00:57:51.458Z</updated>
   <id>http://blog.rookiehacker.org/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hacker101 CTF WriteUp</title>
+    <link href="http://blog.rookiehacker.org/2019/11/12/hacker101ctf/"/>
+    <id>http://blog.rookiehacker.org/2019/11/12/hacker101ctf/</id>
+    <published>2019-11-12T12:46:35.000Z</published>
+    <updated>2019-11-13T00:57:51.458Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=428203132&auto=1&height=66"></iframe><h2 id="About-Hacker101-CTF"><a href="#About-Hacker101-CTF" class="headerlink" title="About Hacker101 CTF"></a>About Hacker101 CTF</h2><p>2018 Hacker101 CTF，是由HackerOne举办的，直接使用HackerOne登录即可。<a href="https://ctf.hacker101.com/" target="_blank" rel="noopener">传送门</a></p><p>【2019.11.12】</p><h2 id="A-little-something-to-get-you-started"><a href="#A-little-something-to-get-you-started" class="headerlink" title="A little something to get you started"></a>A little something to get you started</h2><p>难度和flag分值：Trivial (1 / flag)</p><p>WriteUp:</p><p>打开链接查看源码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!doctype html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">body &#123;</span><br><span class="line">background-image: url(&quot;background.png&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;Welcome to level 0.  Enjoy your stay.&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p><p>发现<code>background.png</code>，添加到链接后访问</p><p>得到flag：<code>^FLAG^05c6d80abb5641043be41332b6868d4e51e5dc899486dda3a44d12c9c2cc5d47$FLAG$`</code></p><h2 id="Micro-CMS-v1"><a href="#Micro-CMS-v1" class="headerlink" title="Micro-CMS v1"></a>Micro-CMS v1</h2><p>难度和flag分值：Easy (2 / flag)</p><p>WriteUp:</p><p>本题目有四个flag。下面分别寻找：</p><p>打开是一个CMS系统，可以创建Markdown类型的页面文件。</p><p>flag1：点击已经存在的几个页面链接发现是以数字分隔的，可能存在注入，尝试直接在edit链接后面加引号，<code>http://34.74.105.127/902d26090b/page/edit/1&#39;</code></p><p>得到flag1:<code>^FLAG^11e4ae63c7deb54c628acac7d6082bdf4573bbae3c81e5fccc035d1709b58c98$FLAG$</code></p><p>flag2：在Home路径下可以看到每篇文章的题目，在编辑页面构造XSS文件标题尝试在Home页面是否存在XSS。</p><p><img src="http://149.28.144.209:8888/images/2019/11/12/3550d20ebf80118120a9706bbc678034.png" alt="图 1"></p><p>创建文章后回到首页</p><p>弹出flag2:<code>^FLAG^c03990c099606a0966e653368894f23422ac22683aaedd2f1cf05fe3e51ebc4b$FLAG$</code></p><p>flag3：在文章内容页面构造XSS，发现标签被过滤了。</p><p><img src="http://149.28.144.209:8888/images/2019/11/12/a7f795388cfadc83fa5c1b1d7d0d624e.png" alt="图 2"></p><p>构造<code>&lt;img&gt;</code>标签如下：</p><p><img src="http://149.28.144.209:8888/images/2019/11/12/7c332dd1ef4974b2c2d4c47733e43025.png" alt="图 3"></p><p>创建文章后访问，弹窗，存在XSS，查看源码</p><p><img src="http://149.28.144.209:8888/images/2019/11/12/d6015d30b4d4c70fa35cca9eabd9e211.png" alt="图 4"></p><p>发现flag3：<code>FLAG^06969e5fad7c4fdbb1373473bca3feaae5cb35192ad076b8c077c8d98ffa6c79$FLAG$</code></p><p>flag4：观察创建的文章ID是从11开始的，已存在的两篇文章ID分别是1和2，那中间的去哪里了？在浏览页面的链接后面一次追加之间的数字都是403，尝试在编辑页面的链接中追加中间的数字</p><p><img src="http://149.28.144.209:8888/images/2019/11/12/3ce72cde9a1f552ff1ce6efddcde6921.png" alt="图 5"></p><p>得到flag4：<code>^FLAG^73f6510533bfe045644c9d7d103f35017ac54fdf8b5517640bf1c884987f0993$FLAG$</code></p><h2 id="Micro-CMS-v2"><a href="#Micro-CMS-v2" class="headerlink" title="Micro-CMS v2"></a>Micro-CMS v2</h2><p>难度和flag分值：Moderate (3 / flag)</p><p>WriteUp:</p><p>本题目有3个flag。下面分别寻找：</p><p>flag1：有登录，尝试是否存在注入。构造登录名为<code>admin &#39; union select &#39;123</code>，密码为<code>123</code>登录成功。查看private page页面</p><p>得到flag1：<code>^FLAG^d2dbfda38f203a282859c13a3da50ee42812417984251fe376dcace56a02e57a$FLAG$</code></p><p>flag2：和CMS v1有点类似，查看hint，发现要采用post方式请求中间ID文章的edit页面</p><p><img src="http://149.28.144.209:8888/images/2019/11/12/91cf6ffe66c032fa86cfe0b6e0af93df.png" alt="图 6"></p><p>得到flag2：<code>^FLAG^18caf2140521df8dfe1c3cf033d74080650e7a3be1f0d3715ea28a6a9de9960d$FLAG$</code></p><p>flag3：在登录页面随便输入用户名密码，提示<code>Unknown user</code></p><p>【待解决】</p><h2 id="Postbook"><a href="#Postbook" class="headerlink" title="Postbook"></a>Postbook</h2><p>难度和flag分值：Easy (4 / flag)</p><p>WriteUp：</p><p>本题目有7个flag。下面分别寻找：</p><p>flag1：注册一个用户，登录后发现已经存在两篇文章，但是id分别为1和3，访问id为2的文章</p><p><img src="http://149.28.144.209:8888/images/2019/11/12/ba22fd1401bf53263a93eb769d22bb92.png" alt="图 7"></p><p>得到flag1：<code>^FLAG^49caa7bbda6269f5b031ef20c3c2c929da30256de5e0aa3ae669f78305db9921$FLAG$</code></p><p>flag2：注册登录后可以发现，在首页只有注册后创建的文章会显示<code>edit</code>按钮，已经存在的并没有。这里通过在编辑链接里通过修改id，直接获取edit权利。尝试在内容中构造XSS并保存。</p><p><img src="http://149.28.144.209:8888/images/2019/11/12/23ae56b6d1e35e870e7564dc9d51ab12.png" alt="图 8"></p><p>得到flag2:<code>^FLAG^a6472d14d9769cef13c37c9a857a6042aa11af11fcc267442b5716a7c5b7b35d$FLAG$</code></p><p>flag3：好吧。。。找了半天，发现在用户名显示的地方是存在XSS的，但是构造好还有XSS的用户名有弹窗但是没有flag。。发现已存在用户除了admin外还有一个user用户，登出后尝试登录user用户，弱密码<code>password</code>，谁料真的登上了。。。</p><p><img src="http://149.28.144.209:8888/images/2019/11/12/a0cb353d9717df175a2b6766079d8966.png" alt="图 9"></p><p>得到flag3：<code>^FLAG^e61c59b72e740c455cf50af04d9d05d0984909e2262afd94d95346aea4491b61$FLAG$</code></p><p>flag4：直接使用burpsuite爆破id字段发现在<code>id=945</code>时存在flag。</p><p>得到flag4：<code>^FLAG^0cae4e96a31362d8c9c11daf0387dec9bf44b2e71b8ef9a69409e468f8d56ffe$FLAG$</code></p><p>flag5：尝试删除文章。发现删除链接id后面跟的是文章id的md5值，这里尝试越权删除其他用户的文章。</p><p><img src="http://149.28.144.209:8888/images/2019/11/13/28071917cb38f4298e9ebad0379bdfee.png" alt="图 10"></p><p>得到flag5：<code>^FLAG^a5d21a4be4c9ed16a98c3d459f75b0984e679dc96eec3ad7c8cbdacc0137bae7$FLAG$</code></p><p>flag6：有了删、改、查，感觉下面就是增了。尝试越权增加一篇文章。先新建一个文章，然后删除并且抓包，发现参数除了title和body外还有一个user_id，这个user_id随着注册人数增加依次增加。这里直接把user_id设置成1之后发送。</p><p><img src="http://149.28.144.209:8888/images/2019/11/13/03535aea1e4d1a3f1ad39f612456be3b.png" alt="图 11"></p><p>得到flag6：<code>^FLAG^3fb398a0f2e9af561c5a12802c8956807d547d23b8d9c5903b114d0c09e4b13d$FLAG$</code> </p><p>flag7：在上面我们删除操作的时候直接使用了id的MD5值，抓包的时候发现用户的Cookie也是一个id=xxxx的哈希值，直接解md5可以发现其直接对应的是user_id，我们登录一个普通用户（我们自己注册的），然后将cookie设置为user_id为2的cookie来冒充用户，发现得到了一个flag和flag3一样，即user用户的flag。所以这里直接想到设置为admin用户的cookie，即user_id为1的cookie，md5(1)的值。刷新页面。</p><p>得到flag7：<code>^FLAG^923ef7586685ba373188fb9000dc76c058e387f614f3a4d8381d63d5a52ba24f$FLAG$</code></p><p>7个flag总算照完了。。。</p><h2 id="Petshop-Pro"><a href="#Petshop-Pro" class="headerlink" title="Petshop Pro"></a>Petshop Pro</h2><p>难度和flag分值：Easy (3 / flag)</p><p>WriteUp：</p><p>本题目有3个flag。下面分别寻找：</p><p>flag1：随便点了一下，发现checkout结算这里有个将单价算一下的操作，这里直接抓包修改购物车cart中相应商品的<code>price</code>为<code>0</code>。</p><p><img src="http://149.28.144.209:8888/images/2019/11/13/aef3f3ef78e255c02d09efaa82690e2c.png" alt="图 12"></p><p>得到flag1：<code>^FLAG^b75dec926d3e2c5ee2a2987d33f1cd510c63094bddda9c86797cb5d3e58dd785$FLAG$</code></p><p>【今日成功拿到52points，顺利拿到两个private program的invitation的优先机会~】</p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2019/11/12/hacker101ctf/" title="Hacker101 CTF WriteUp">Hacker101 CTF WriteUp</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2019/11/12/hacker101ctf/" title="Hacker101 CTF WriteUp">http://blog.rookiehacker.org/2019/11/12/hacker101ctf/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      2018 Hacker101 CTF 训练，持续更新中...
+    
+    </summary>
+    
+      <category term="CTF" scheme="http://blog.rookiehacker.org/categories/CTF/"/>
+    
+    
+      <category term="CTF" scheme="http://blog.rookiehacker.org/tags/CTF/"/>
+    
+      <category term="Hacker101" scheme="http://blog.rookiehacker.org/tags/Hacker101/"/>
+    
+  </entry>
   
   <entry>
     <title>Django使用ajax后调用render前端无法跳转</title>
@@ -479,30 +503,6 @@
       <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="情感" scheme="http://blog.rookiehacker.org/tags/%E6%83%85%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【谈谈最近】为考研战斗！！！</title>
-    <link href="http://blog.rookiehacker.org/2017/08/07/fighting/"/>
-    <id>http://blog.rookiehacker.org/2017/08/07/fighting/</id>
-    <published>2017-08-07T12:55:40.000Z</published>
-    <updated>2017-08-07T15:21:30.943Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=5279696&auto=0&height=66"></iframe><h1 id="关于脚"><a href="#关于脚" class="headerlink" title="关于脚"></a>关于脚</h1><p>都说“伤筋动骨一百天”，我这次可算是彻底领悟了，什么“一百天”！都是骗人的！/(ㄒoㄒ)/~自从3月29号崴脚一直到现在，四个多月了，脚踝还依然是肿的。。尤其是每天晚上回来，走了一天，肿的就更厉害了，<br>并且睡觉的时候脚踝还会疼……所以为了避免有什么以外出现，一回到学校，就立马去医院做个磁共振。。做磁共振的过程也是一波三折，一共去了三次才总算搞定了，最后一次还是冒雨去的。。浑身都湿透了啊。。。不过最后还好脚没什么事，医生说只是恢复的慢点。。好吧。。</p><h1 id="关于评论系统"><a href="#关于评论系统" class="headerlink" title="关于评论系统"></a>关于评论系统</h1><p>自多说因为没有找到好的商业模式盈利而关闭以来，一直以为越强大的企业提供的服务会更加坚挺，但现在又一次让我狠狠地打脸啊。。没想到网易云跟帖也会关。。留下来的第三方评论也不多了，友言不知道还能坚持多久，目前最靠谱的估计也就是搜狐的畅言了，并且畅言还发布了消息说不会离开，并且能够接入网易云跟帖的数据。。其实也被并不太寄希望于第三方评论了，也不太想折腾了。还是感觉自己做的评论比较好使哈哈。。不过鉴于自己目前的水平，还是再往后放一放吧，有时间的时候再说。虽然没有了评论系统，但是还是有很多方式来沟通的，大家可以暂时添加这个微信群，有问题什么的可以一起交流<img src="http://ojzr7go2m.bkt.clouddn.com/blog/20170807/231052861.png" alt="">或者直接<a href="http://blog.rookiehacker.org/about/">联系我</a></p><h1 id="关于考研"><a href="#关于考研" class="headerlink" title="关于考研"></a>关于考研</h1><p>其实这段时间最主要最重要的是也就是考研复习了！目标基本定下来了，上交的计算机，网络安全方向或者是人工智能方向！哈哈感觉目标确实挺“远大”的，还有130多天的时间，所以以后可能大部分时间里都是在复习，更新的频率会低一些，希望自己也能够沉下心来，脚踏实地，认认真真地走好每一步！为了自己的梦想而不懈奋斗！加油！</p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2017/08/07/fighting/" title="【谈谈最近】为考研战斗！！！">【谈谈最近】为考研战斗！！！</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2017/08/07/fighting/" title="【谈谈最近】为考研战斗！！！">http://blog.rookiehacker.org/2017/08/07/fighting/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
-    
-    <summary type="html">
-    
-      好久没更新啦，因为实在是太忙了，谈谈我最近都干嘛了吧。。
-    
-    </summary>
-    
-      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="考研" scheme="http://blog.rookiehacker.org/tags/%E8%80%83%E7%A0%94/"/>
     
   </entry>
   
