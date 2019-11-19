@@ -5,9 +5,9 @@
   <subtitle>小菜鸟的blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://liucunzhan.com/"/>
+  <link href="http://blog.rookiehacker.org/"/>
   <updated>2019-11-13T00:57:51.458Z</updated>
-  <id>http://liucunzhan.com/</id>
+  <id>http://blog.rookiehacker.org/</id>
   
   <author>
     <name>John</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hacker101 CTF WriteUp</title>
-    <link href="http://liucunzhan.com/2019/11/12/hacker101ctf/"/>
-    <id>http://liucunzhan.com/2019/11/12/hacker101ctf/</id>
+    <link href="http://blog.rookiehacker.org/2019/11/12/hacker101ctf/"/>
+    <id>http://blog.rookiehacker.org/2019/11/12/hacker101ctf/</id>
     <published>2019-11-12T12:46:35.000Z</published>
     <updated>2019-11-13T00:57:51.458Z</updated>
     
@@ -31,19 +31,19 @@
     
     </summary>
     
-      <category term="CTF" scheme="http://liucunzhan.com/categories/CTF/"/>
+      <category term="CTF" scheme="http://blog.rookiehacker.org/categories/CTF/"/>
     
     
-      <category term="CTF" scheme="http://liucunzhan.com/tags/CTF/"/>
+      <category term="CTF" scheme="http://blog.rookiehacker.org/tags/CTF/"/>
     
-      <category term="Hacker101" scheme="http://liucunzhan.com/tags/Hacker101/"/>
+      <category term="Hacker101" scheme="http://blog.rookiehacker.org/tags/Hacker101/"/>
     
   </entry>
   
   <entry>
     <title>Django使用ajax后调用render前端无法跳转</title>
-    <link href="http://liucunzhan.com/2019/11/08/renderandajax/"/>
-    <id>http://liucunzhan.com/2019/11/08/renderandajax/</id>
+    <link href="http://blog.rookiehacker.org/2019/11/08/renderandajax/"/>
+    <id>http://blog.rookiehacker.org/2019/11/08/renderandajax/</id>
     <published>2019-11-08T11:47:52.000Z</published>
     <updated>2019-11-12T05:43:35.268Z</updated>
     
@@ -55,23 +55,23 @@
     
     </summary>
     
-      <category term="Python" scheme="http://liucunzhan.com/categories/Python/"/>
+      <category term="Python" scheme="http://blog.rookiehacker.org/categories/Python/"/>
     
     
-      <category term="Django" scheme="http://liucunzhan.com/tags/Django/"/>
+      <category term="Django" scheme="http://blog.rookiehacker.org/tags/Django/"/>
     
-      <category term="前端" scheme="http://liucunzhan.com/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://blog.rookiehacker.org/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="漏洞" scheme="http://liucunzhan.com/tags/%E6%BC%8F%E6%B4%9E/"/>
+      <category term="漏洞" scheme="http://blog.rookiehacker.org/tags/%E6%BC%8F%E6%B4%9E/"/>
     
-      <category term="Windows" scheme="http://liucunzhan.com/tags/Windows/"/>
+      <category term="Windows" scheme="http://blog.rookiehacker.org/tags/Windows/"/>
     
   </entry>
   
   <entry>
     <title>Hi!我爱你！</title>
-    <link href="http://liucunzhan.com/2019/08/11/mylovestory/"/>
-    <id>http://liucunzhan.com/2019/08/11/mylovestory/</id>
+    <link href="http://blog.rookiehacker.org/2019/08/11/mylovestory/"/>
+    <id>http://blog.rookiehacker.org/2019/08/11/mylovestory/</id>
     <published>2019-08-11T14:33:55.000Z</published>
     <updated>2019-08-26T15:00:10.595Z</updated>
     
@@ -83,21 +83,21 @@
     
     </summary>
     
-      <category term="我的爱情故事" scheme="http://liucunzhan.com/categories/%E6%88%91%E7%9A%84%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B/"/>
+      <category term="我的爱情故事" scheme="http://blog.rookiehacker.org/categories/%E6%88%91%E7%9A%84%E7%88%B1%E6%83%85%E6%95%85%E4%BA%8B/"/>
     
     
-      <category term="生活" scheme="http://liucunzhan.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="情感" scheme="http://liucunzhan.com/tags/%E6%83%85%E6%84%9F/"/>
+      <category term="情感" scheme="http://blog.rookiehacker.org/tags/%E6%83%85%E6%84%9F/"/>
     
-      <category term="爱情" scheme="http://liucunzhan.com/tags/%E7%88%B1%E6%83%85/"/>
+      <category term="爱情" scheme="http://blog.rookiehacker.org/tags/%E7%88%B1%E6%83%85/"/>
     
   </entry>
   
   <entry>
     <title>Django中文件上传的小坑[WIP]</title>
-    <link href="http://liucunzhan.com/2019/07/05/djangouploadfile/"/>
-    <id>http://liucunzhan.com/2019/07/05/djangouploadfile/</id>
+    <link href="http://blog.rookiehacker.org/2019/07/05/djangouploadfile/"/>
+    <id>http://blog.rookiehacker.org/2019/07/05/djangouploadfile/</id>
     <published>2019-07-04T16:24:28.000Z</published>
     <updated>2019-08-26T14:51:21.064Z</updated>
     
@@ -109,19 +109,19 @@
     
     </summary>
     
-      <category term="Python" scheme="http://liucunzhan.com/categories/Python/"/>
+      <category term="Python" scheme="http://blog.rookiehacker.org/categories/Python/"/>
     
     
-      <category term="Python" scheme="http://liucunzhan.com/tags/Python/"/>
+      <category term="Python" scheme="http://blog.rookiehacker.org/tags/Python/"/>
     
-      <category term="Django" scheme="http://liucunzhan.com/tags/Django/"/>
+      <category term="Django" scheme="http://blog.rookiehacker.org/tags/Django/"/>
     
   </entry>
   
   <entry>
     <title>【考研之路】回首漫漫考研路</title>
-    <link href="http://liucunzhan.com/2019/03/30/fightforpku/"/>
-    <id>http://liucunzhan.com/2019/03/30/fightforpku/</id>
+    <link href="http://blog.rookiehacker.org/2019/03/30/fightforpku/"/>
+    <id>http://blog.rookiehacker.org/2019/03/30/fightforpku/</id>
     <published>2019-03-29T17:56:40.000Z</published>
     <updated>2019-04-20T13:34:03.820Z</updated>
     
@@ -133,17 +133,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://liucunzhan.com/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="考研" scheme="http://liucunzhan.com/tags/%E8%80%83%E7%A0%94/"/>
+      <category term="考研" scheme="http://blog.rookiehacker.org/tags/%E8%80%83%E7%A0%94/"/>
     
   </entry>
   
   <entry>
     <title>【Web渗透】FCKeditor和CKeditor插件漏洞利用</title>
-    <link href="http://liucunzhan.com/2019/03/19/fckeditorandckeditor/"/>
-    <id>http://liucunzhan.com/2019/03/19/fckeditorandckeditor/</id>
+    <link href="http://blog.rookiehacker.org/2019/03/19/fckeditorandckeditor/"/>
+    <id>http://blog.rookiehacker.org/2019/03/19/fckeditorandckeditor/</id>
     <published>2019-03-19T15:20:36.000Z</published>
     <updated>2019-03-29T17:53:13.463Z</updated>
     
@@ -155,19 +155,19 @@
     
     </summary>
     
-      <category term="Web渗透" scheme="http://liucunzhan.com/categories/Web%E6%B8%97%E9%80%8F/"/>
+      <category term="Web渗透" scheme="http://blog.rookiehacker.org/categories/Web%E6%B8%97%E9%80%8F/"/>
     
     
-      <category term="web" scheme="http://liucunzhan.com/tags/web/"/>
+      <category term="web" scheme="http://blog.rookiehacker.org/tags/web/"/>
     
-      <category term="渗透" scheme="http://liucunzhan.com/tags/%E6%B8%97%E9%80%8F/"/>
+      <category term="渗透" scheme="http://blog.rookiehacker.org/tags/%E6%B8%97%E9%80%8F/"/>
     
   </entry>
   
   <entry>
     <title>【Tips】Chrome更新后cookie的设置&amp;Django过滤器filter中的参数详解</title>
-    <link href="http://liucunzhan.com/2019/03/04/chromecookie/"/>
-    <id>http://liucunzhan.com/2019/03/04/chromecookie/</id>
+    <link href="http://blog.rookiehacker.org/2019/03/04/chromecookie/"/>
+    <id>http://blog.rookiehacker.org/2019/03/04/chromecookie/</id>
     <published>2019-03-04T14:35:32.000Z</published>
     <updated>2019-03-04T15:00:36.889Z</updated>
     
@@ -179,23 +179,23 @@
     
     </summary>
     
-      <category term="Python" scheme="http://liucunzhan.com/categories/Python/"/>
+      <category term="Python" scheme="http://blog.rookiehacker.org/categories/Python/"/>
     
     
-      <category term="Chrome" scheme="http://liucunzhan.com/tags/Chrome/"/>
+      <category term="Chrome" scheme="http://blog.rookiehacker.org/tags/Chrome/"/>
     
-      <category term="cookie" scheme="http://liucunzhan.com/tags/cookie/"/>
+      <category term="cookie" scheme="http://blog.rookiehacker.org/tags/cookie/"/>
     
-      <category term="Python" scheme="http://liucunzhan.com/tags/Python/"/>
+      <category term="Python" scheme="http://blog.rookiehacker.org/tags/Python/"/>
     
-      <category term="Django" scheme="http://liucunzhan.com/tags/Django/"/>
+      <category term="Django" scheme="http://blog.rookiehacker.org/tags/Django/"/>
     
   </entry>
   
   <entry>
     <title>【Web渗透】Metinfo 5.3.19 管理员密码重置漏洞分析</title>
-    <link href="http://liucunzhan.com/2019/02/22/metinfotest/"/>
-    <id>http://liucunzhan.com/2019/02/22/metinfotest/</id>
+    <link href="http://blog.rookiehacker.org/2019/02/22/metinfotest/"/>
+    <id>http://blog.rookiehacker.org/2019/02/22/metinfotest/</id>
     <published>2019-02-22T12:01:40.000Z</published>
     <updated>2019-02-23T03:55:55.645Z</updated>
     
@@ -207,21 +207,21 @@
     
     </summary>
     
-      <category term="Web渗透" scheme="http://liucunzhan.com/categories/Web%E6%B8%97%E9%80%8F/"/>
+      <category term="Web渗透" scheme="http://blog.rookiehacker.org/categories/Web%E6%B8%97%E9%80%8F/"/>
     
     
-      <category term="渗透" scheme="http://liucunzhan.com/tags/%E6%B8%97%E9%80%8F/"/>
+      <category term="渗透" scheme="http://blog.rookiehacker.org/tags/%E6%B8%97%E9%80%8F/"/>
     
-      <category term="密码重置" scheme="http://liucunzhan.com/tags/%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/"/>
+      <category term="密码重置" scheme="http://blog.rookiehacker.org/tags/%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/"/>
     
-      <category term="Metinfo" scheme="http://liucunzhan.com/tags/Metinfo/"/>
+      <category term="Metinfo" scheme="http://blog.rookiehacker.org/tags/Metinfo/"/>
     
   </entry>
   
   <entry>
     <title>【长亭时光】这些天我学到的东西</title>
-    <link href="http://liucunzhan.com/2019/02/21/thedaysinchaitin/"/>
-    <id>http://liucunzhan.com/2019/02/21/thedaysinchaitin/</id>
+    <link href="http://blog.rookiehacker.org/2019/02/21/thedaysinchaitin/"/>
+    <id>http://blog.rookiehacker.org/2019/02/21/thedaysinchaitin/</id>
     <published>2019-02-21T12:28:55.000Z</published>
     <updated>2019-02-22T12:08:36.165Z</updated>
     
@@ -233,25 +233,25 @@
     
     </summary>
     
-      <category term="Python" scheme="http://liucunzhan.com/categories/Python/"/>
+      <category term="Python" scheme="http://blog.rookiehacker.org/categories/Python/"/>
     
     
-      <category term="Python" scheme="http://liucunzhan.com/tags/Python/"/>
+      <category term="Python" scheme="http://blog.rookiehacker.org/tags/Python/"/>
     
-      <category term="Django" scheme="http://liucunzhan.com/tags/Django/"/>
+      <category term="Django" scheme="http://blog.rookiehacker.org/tags/Django/"/>
     
-      <category term="Docker" scheme="http://liucunzhan.com/tags/Docker/"/>
+      <category term="Docker" scheme="http://blog.rookiehacker.org/tags/Docker/"/>
     
-      <category term="Git" scheme="http://liucunzhan.com/tags/Git/"/>
+      <category term="Git" scheme="http://blog.rookiehacker.org/tags/Git/"/>
     
-      <category term="长亭" scheme="http://liucunzhan.com/tags/%E9%95%BF%E4%BA%AD/"/>
+      <category term="长亭" scheme="http://blog.rookiehacker.org/tags/%E9%95%BF%E4%BA%AD/"/>
     
   </entry>
   
   <entry>
     <title>新年快乐！</title>
-    <link href="http://liucunzhan.com/2019/02/05/happynewyear-1/"/>
-    <id>http://liucunzhan.com/2019/02/05/happynewyear-1/</id>
+    <link href="http://blog.rookiehacker.org/2019/02/05/happynewyear-1/"/>
+    <id>http://blog.rookiehacker.org/2019/02/05/happynewyear-1/</id>
     <published>2019-02-05T11:51:42.000Z</published>
     <updated>2019-02-05T12:51:09.224Z</updated>
     
@@ -263,17 +263,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://liucunzhan.com/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="http://liucunzhan.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>【北京之行】圆满完成任务！拿到实习offer！</title>
-    <link href="http://liucunzhan.com/2019/01/10/getoffer/"/>
-    <id>http://liucunzhan.com/2019/01/10/getoffer/</id>
+    <link href="http://blog.rookiehacker.org/2019/01/10/getoffer/"/>
+    <id>http://blog.rookiehacker.org/2019/01/10/getoffer/</id>
     <published>2019-01-10T15:22:42.000Z</published>
     <updated>2019-01-10T16:19:58.326Z</updated>
     
@@ -285,21 +285,21 @@
     
     </summary>
     
-      <category term="生活" scheme="http://liucunzhan.com/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="实习" scheme="http://liucunzhan.com/tags/%E5%AE%9E%E4%B9%A0/"/>
+      <category term="实习" scheme="http://blog.rookiehacker.org/tags/%E5%AE%9E%E4%B9%A0/"/>
     
-      <category term="面试" scheme="http://liucunzhan.com/tags/%E9%9D%A2%E8%AF%95/"/>
+      <category term="面试" scheme="http://blog.rookiehacker.org/tags/%E9%9D%A2%E8%AF%95/"/>
     
-      <category term="offer" scheme="http://liucunzhan.com/tags/offer/"/>
+      <category term="offer" scheme="http://blog.rookiehacker.org/tags/offer/"/>
     
   </entry>
   
   <entry>
     <title>【LeetCode】刷题笔记(ing~)</title>
-    <link href="http://liucunzhan.com/2019/01/05/LeetCode/"/>
-    <id>http://liucunzhan.com/2019/01/05/LeetCode/</id>
+    <link href="http://blog.rookiehacker.org/2019/01/05/LeetCode/"/>
+    <id>http://blog.rookiehacker.org/2019/01/05/LeetCode/</id>
     <published>2019-01-05T05:46:38.000Z</published>
     <updated>2019-01-05T06:33:46.177Z</updated>
     
@@ -311,17 +311,17 @@
     
     </summary>
     
-      <category term="LeetCode" scheme="http://liucunzhan.com/categories/LeetCode/"/>
+      <category term="LeetCode" scheme="http://blog.rookiehacker.org/categories/LeetCode/"/>
     
     
-      <category term="LeetCode" scheme="http://liucunzhan.com/tags/LeetCode/"/>
+      <category term="LeetCode" scheme="http://blog.rookiehacker.org/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>【Web渗透】是时候重拾技能了</title>
-    <link href="http://liucunzhan.com/2019/01/03/renewmywebsec/"/>
-    <id>http://liucunzhan.com/2019/01/03/renewmywebsec/</id>
+    <link href="http://blog.rookiehacker.org/2019/01/03/renewmywebsec/"/>
+    <id>http://blog.rookiehacker.org/2019/01/03/renewmywebsec/</id>
     <published>2019-01-03T10:50:36.000Z</published>
     <updated>2019-01-03T14:19:14.652Z</updated>
     
@@ -333,19 +333,19 @@
     
     </summary>
     
-      <category term="Web渗透" scheme="http://liucunzhan.com/categories/Web%E6%B8%97%E9%80%8F/"/>
+      <category term="Web渗透" scheme="http://blog.rookiehacker.org/categories/Web%E6%B8%97%E9%80%8F/"/>
     
     
-      <category term="Web" scheme="http://liucunzhan.com/tags/Web/"/>
+      <category term="Web" scheme="http://blog.rookiehacker.org/tags/Web/"/>
     
-      <category term="渗透" scheme="http://liucunzhan.com/tags/%E6%B8%97%E9%80%8F/"/>
+      <category term="渗透" scheme="http://blog.rookiehacker.org/tags/%E6%B8%97%E9%80%8F/"/>
     
   </entry>
   
   <entry>
     <title>【你好，2019!】再见，2018！你好，2019！</title>
-    <link href="http://liucunzhan.com/2019/01/01/hello-2019/"/>
-    <id>http://liucunzhan.com/2019/01/01/hello-2019/</id>
+    <link href="http://blog.rookiehacker.org/2019/01/01/hello-2019/"/>
+    <id>http://blog.rookiehacker.org/2019/01/01/hello-2019/</id>
     <published>2019-01-01T07:18:43.000Z</published>
     <updated>2019-01-01T08:18:52.144Z</updated>
     
@@ -357,17 +357,17 @@
     
     </summary>
     
-      <category term="生活" scheme="http://liucunzhan.com/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="http://liucunzhan.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
   <entry>
     <title>【计算机组成与设计】加法器的优化</title>
-    <link href="http://liucunzhan.com/2018/07/30/ComputerOrganizationandDesign-adder/"/>
-    <id>http://liucunzhan.com/2018/07/30/ComputerOrganizationandDesign-adder/</id>
+    <link href="http://blog.rookiehacker.org/2018/07/30/ComputerOrganizationandDesign-adder/"/>
+    <id>http://blog.rookiehacker.org/2018/07/30/ComputerOrganizationandDesign-adder/</id>
     <published>2018-07-30T15:11:03.000Z</published>
     <updated>2018-07-30T15:49:13.241Z</updated>
     
@@ -379,17 +379,17 @@
     
     </summary>
     
-      <category term="计算机组成原理" scheme="http://liucunzhan.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
+      <category term="计算机组成原理" scheme="http://blog.rookiehacker.org/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
     
     
-      <category term="计算机组成" scheme="http://liucunzhan.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/"/>
+      <category term="计算机组成" scheme="http://blog.rookiehacker.org/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/"/>
     
   </entry>
   
   <entry>
     <title>【DRDos攻击】基于Memcached的DRDos的研究与攻击复现</title>
-    <link href="http://liucunzhan.com/2018/03/12/memcacheddrdos/"/>
-    <id>http://liucunzhan.com/2018/03/12/memcacheddrdos/</id>
+    <link href="http://blog.rookiehacker.org/2018/03/12/memcacheddrdos/"/>
+    <id>http://blog.rookiehacker.org/2018/03/12/memcacheddrdos/</id>
     <published>2018-03-11T22:33:10.000Z</published>
     <updated>2018-03-12T12:10:52.195Z</updated>
     
@@ -401,21 +401,21 @@
     
     </summary>
     
-      <category term="DDos攻击" scheme="http://liucunzhan.com/categories/DDos%E6%94%BB%E5%87%BB/"/>
+      <category term="DDos攻击" scheme="http://blog.rookiehacker.org/categories/DDos%E6%94%BB%E5%87%BB/"/>
     
     
-      <category term="Memcached" scheme="http://liucunzhan.com/tags/Memcached/"/>
+      <category term="Memcached" scheme="http://blog.rookiehacker.org/tags/Memcached/"/>
     
-      <category term="DRDos" scheme="http://liucunzhan.com/tags/DRDos/"/>
+      <category term="DRDos" scheme="http://blog.rookiehacker.org/tags/DRDos/"/>
     
-      <category term="DDos" scheme="http://liucunzhan.com/tags/DDos/"/>
+      <category term="DDos" scheme="http://blog.rookiehacker.org/tags/DDos/"/>
     
   </entry>
   
   <entry>
     <title>【励志人物】两位距离诺奖很近的华人</title>
-    <link href="http://liucunzhan.com/2018/03/06/Inspirationalpeople/"/>
-    <id>http://liucunzhan.com/2018/03/06/Inspirationalpeople/</id>
+    <link href="http://blog.rookiehacker.org/2018/03/06/Inspirationalpeople/"/>
+    <id>http://blog.rookiehacker.org/2018/03/06/Inspirationalpeople/</id>
     <published>2018-03-06T12:35:10.000Z</published>
     <updated>2018-03-06T13:25:46.255Z</updated>
     
@@ -427,19 +427,19 @@
     
     </summary>
     
-      <category term="励志故事" scheme="http://liucunzhan.com/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B/"/>
+      <category term="励志故事" scheme="http://blog.rookiehacker.org/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B/"/>
     
     
-      <category term="励志" scheme="http://liucunzhan.com/tags/%E5%8A%B1%E5%BF%97/"/>
+      <category term="励志" scheme="http://blog.rookiehacker.org/tags/%E5%8A%B1%E5%BF%97/"/>
     
-      <category term="诺奖" scheme="http://liucunzhan.com/tags/%E8%AF%BA%E5%A5%96/"/>
+      <category term="诺奖" scheme="http://blog.rookiehacker.org/tags/%E8%AF%BA%E5%A5%96/"/>
     
   </entry>
   
   <entry>
     <title>【版本更新】对博客的一次更新升级</title>
-    <link href="http://liucunzhan.com/2018/03/03/blogupdate/"/>
-    <id>http://liucunzhan.com/2018/03/03/blogupdate/</id>
+    <link href="http://blog.rookiehacker.org/2018/03/03/blogupdate/"/>
+    <id>http://blog.rookiehacker.org/2018/03/03/blogupdate/</id>
     <published>2018-03-03T07:42:13.000Z</published>
     <updated>2018-03-03T11:45:40.676Z</updated>
     
@@ -451,17 +451,17 @@
     
     </summary>
     
-      <category term="Hexo" scheme="http://liucunzhan.com/categories/Hexo/"/>
+      <category term="Hexo" scheme="http://blog.rookiehacker.org/categories/Hexo/"/>
     
     
-      <category term="Hexo" scheme="http://liucunzhan.com/tags/Hexo/"/>
+      <category term="Hexo" scheme="http://blog.rookiehacker.org/tags/Hexo/"/>
     
   </entry>
   
   <entry>
     <title>【电影推荐】推荐两部电影标志回归Blog</title>
-    <link href="http://liucunzhan.com/2018/02/28/movies/"/>
-    <id>http://liucunzhan.com/2018/02/28/movies/</id>
+    <link href="http://blog.rookiehacker.org/2018/02/28/movies/"/>
+    <id>http://blog.rookiehacker.org/2018/02/28/movies/</id>
     <published>2018-02-28T13:15:12.000Z</published>
     <updated>2018-02-28T14:57:43.895Z</updated>
     
@@ -473,19 +473,19 @@
     
     </summary>
     
-      <category term="生活" scheme="http://liucunzhan.com/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="http://liucunzhan.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="电影" scheme="http://liucunzhan.com/tags/%E7%94%B5%E5%BD%B1/"/>
+      <category term="电影" scheme="http://blog.rookiehacker.org/tags/%E7%94%B5%E5%BD%B1/"/>
     
   </entry>
   
   <entry>
     <title>【LOVE】这是一篇被我遗忘的blog</title>
-    <link href="http://liucunzhan.com/2018/02/11/love/"/>
-    <id>http://liucunzhan.com/2018/02/11/love/</id>
+    <link href="http://blog.rookiehacker.org/2018/02/11/love/"/>
+    <id>http://blog.rookiehacker.org/2018/02/11/love/</id>
     <published>2018-02-11T14:24:34.000Z</published>
     <updated>2018-02-28T15:01:35.211Z</updated>
     
@@ -497,12 +497,12 @@
     
     </summary>
     
-      <category term="生活" scheme="http://liucunzhan.com/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="生活" scheme="http://liucunzhan.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="情感" scheme="http://liucunzhan.com/tags/%E6%83%85%E6%84%9F/"/>
+      <category term="情感" scheme="http://blog.rookiehacker.org/tags/%E6%83%85%E6%84%9F/"/>
     
   </entry>
   
