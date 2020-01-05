@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.rookiehacker.org/"/>
-  <updated>2020-01-05T08:08:09.341Z</updated>
+  <updated>2020-01-05T15:28:02.773Z</updated>
   <id>http://blog.rookiehacker.org/</id>
   
   <author>
@@ -21,18 +21,17 @@
     <link href="http://blog.rookiehacker.org/2020/01/05/simplex-algorithm/"/>
     <id>http://blog.rookiehacker.org/2020/01/05/simplex-algorithm/</id>
     <published>2020-01-05T08:07:02.000Z</published>
-    <updated>2020-01-05T08:08:09.341Z</updated>
+    <updated>2020-01-05T15:28:02.773Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>明天就考算法了，学一下单纯形法，补补课~</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>明天就考算法了，学一下单纯形法，补补课~<br><a href="https://www.bilibili.com/video/av61811262?from=search&amp;seid=8854802379104989107" target="_blank" rel="noopener">B站啥都有</a></p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2020/01/05/simplex-algorithm/" title="单纯形法">单纯形法</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2020/01/05/simplex-algorithm/" title="单纯形法">http://blog.rookiehacker.org/2020/01/05/simplex-algorithm/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla
-      
+      明天就考算法了，学一下单纯形法，补补课~
     
     </summary>
+    
+      <category term="算法" scheme="http://blog.rookiehacker.org/categories/%E7%AE%97%E6%B3%95/"/>
     
     
       <category term="算法" scheme="http://blog.rookiehacker.org/tags/%E7%AE%97%E6%B3%95/"/>
