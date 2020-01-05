@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.rookiehacker.org/"/>
-  <updated>2020-01-05T15:28:02.773Z</updated>
+  <updated>2020-01-05T15:37:36.440Z</updated>
   <id>http://blog.rookiehacker.org/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>匈牙利算法</title>
+    <link href="http://blog.rookiehacker.org/2020/01/05/hungary-algorithm/"/>
+    <id>http://blog.rookiehacker.org/2020/01/05/hungary-algorithm/</id>
+    <published>2020-01-05T15:36:09.000Z</published>
+    <updated>2020-01-05T15:37:36.440Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>明天就考算法了，学一下匈牙利算法，补补课~<br><a href="https://blog.csdn.net/u013384984/article/details/90718287" target="_blank" rel="noopener">CSDN啥都有</a></p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2020/01/05/hungary-algorithm/" title="匈牙利算法">匈牙利算法</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2020/01/05/hungary-algorithm/" title="匈牙利算法">http://blog.rookiehacker.org/2020/01/05/hungary-algorithm/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      明天就考算法了，学一下匈牙利算法，补补课~
+    
+    </summary>
+    
+      <category term="算法" scheme="http://blog.rookiehacker.org/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="算法" scheme="http://blog.rookiehacker.org/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>单纯形法</title>
@@ -469,32 +491,6 @@
     
     
       <category term="生活" scheme="http://blog.rookiehacker.org/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【北京之行】圆满完成任务！拿到实习offer！</title>
-    <link href="http://blog.rookiehacker.org/2019/01/10/getoffer/"/>
-    <id>http://blog.rookiehacker.org/2019/01/10/getoffer/</id>
-    <published>2019-01-10T15:22:42.000Z</published>
-    <updated>2019-01-10T16:19:58.326Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="前路漫漫，努力向前"><a href="#前路漫漫，努力向前" class="headerlink" title="前路漫漫，努力向前"></a>前路漫漫，努力向前</h2><p>一月的北京待我还算客气，据说因为我的到来，帝都的气温都比往日温和了些（手动滑稽O(∩-∩)O哈哈~）<br>按照之前的计划，我准备在上半年直到九月份开学（如果研究生考试一切顺利）找一份实习，一边积累自己的经验，也顺便一边赚些许的工资（虽然没啥大的期待，但是起码能给父母减轻些负担吧，毕竟也老大不小咯ε=(´ο｀*)))）所以考研结束后就一直计划投几个简历试一试。自己真的很幸运能遇到这么多天南地北的小哥哥小姐姐，能帮我内推（不然估计我那简历别人可能看都不看O(∩_∩)O哈哈~），小伙伴们确实给力，虽然现在的计算机就业形式不是太好，但没多久就收到了好几家的面试邀请。因为考的P大，所以本着就近原则就选择了在北京的三家（长亭，360，iqiyi），早早地就买好了车票，订好了房间，计划三天时间，每天一家，剩下的时间也顺便去看看帝都的同学好友，聚一聚，耍一耍。但是突然接到电话，360的大佬说要电话面试，然后不用去公司面了，便想着先攒攒经验（因为凭我这点本事本来就不太可能能进），就约了时间电话面试。果然，这一面发现了很多问题，赶紧查漏补缺！</p><p>然后7号下了火车就直奔中关村了。下午直奔长亭，和nice的小哥哥进行了差不多一小时的技术面试。小哥哥真是太好了，基本没怎么为难我（谁让我这么菜呢~）然后和nice的小姐姐又进了几十分钟的hr面，还见了大学期间技术最棒的同学（也在长亭工作）真的感觉长亭真是太棒了，很亲切，氛围尤其舒服！一想年后就能去给大佬们端茶倒水我就激动地不行O(∩_∩)O哈哈！！！面试结束后就去找在附近读研究生的同学了~</p><p>8号去了宾馆对面的iqiyi大厦准备体验一下大公司的氛围（主要是想亲眼见一见<a href="http://www.lijiejie.com/" target="_blank" rel="noopener">李姐姐</a>），杰哥待我去了面试的地方，之后是他的同事负责面试，两轮都是技术面，第一面感觉偏安全，第二轮主要是谈了开发的一些问题，虽然气氛紧张中夹杂着尴尬，但我也发现了自己与现实的差距究竟如何，也是抱着学习的态度吧~虽然面试结束时结果如何我已猜到，但这次面试还是让自己收获了很多东西~</p><h2 id="时光不老，我们不散"><a href="#时光不老，我们不散" class="headerlink" title="时光不老，我们不散"></a>时光不老，我们不散</h2><p>由于面试基本上一上午or下午就结束了，所以每天都有多半天的时间可以自由活动，在海淀学习工作的同学很多，便趁这机会和他们小聚一下哈哈哈，有小学同学，中学同学，大学同学，毕业半年没见的，一年没见的，还有六七年没见的，这次都见到啦真的很开心(^▽^)。虽然赶上了期末考试季，但是他们还是都挤出时间陪我逛校园请我吃大餐，回家一想好像这三天每天都是白吃白喝ε=(´ο｀*)))哈哈，我真的很感动！谢谢小伙伴们的热情款待，等我实习发了工资，请你们吃个够哈哈！！就在9号也就是最后一天，没有面试，便去了之前没去过的圆明园，走啊走，几乎逛了75%？？反正是从下午一直到晚上人家公园关门才算逛完，脚丫子也妥妥废了o(╥﹏╥)o本以为面试结果还要等好几天，结果正面对着圆明园的古迹满心感慨的我突然接到了长亭小姐姐的电话！过了！！！哈哈哈开心！！！！最最最最最梦寐以求的公司此刻向我打开了大门！！！！！真是太幸运了！！！2019年第一个愿望算是实现啦！O(∩_∩)O哈哈~希望过年后的研究生复试也还能顺利哈哈哈！<br>不过虽然说是拿到了长亭的实习offer但是我自己的能力还是太菜，得好好把握这次来之不易的机会！！！好好努力，好好学习！！加油ヾ(◍°∇°◍)ﾉﾞ</p><h3 id="PS-七牛的图床不能用了，想着能不能自己搭一个呢？？"><a href="#PS-七牛的图床不能用了，想着能不能自己搭一个呢？？" class="headerlink" title="PS.七牛的图床不能用了，想着能不能自己搭一个呢？？"></a>PS.七牛的图床不能用了，想着能不能自己搭一个呢？？</h3><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2019/01/10/getoffer/" title="【北京之行】圆满完成任务！拿到实习offer！">【北京之行】圆满完成任务！拿到实习offer！</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2019/01/10/getoffer/" title="【北京之行】圆满完成任务！拿到实习offer！">http://blog.rookiehacker.org/2019/01/10/getoffer/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
-    
-    <summary type="html">
-    
-      三天北京之旅圆满结束，去了很多地方，见了很多人，经历了很多，学习了~
-    
-    </summary>
-    
-      <category term="生活" scheme="http://blog.rookiehacker.org/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="实习" scheme="http://blog.rookiehacker.org/tags/%E5%AE%9E%E4%B9%A0/"/>
-    
-      <category term="面试" scheme="http://blog.rookiehacker.org/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="offer" scheme="http://blog.rookiehacker.org/tags/offer/"/>
     
   </entry>
   
