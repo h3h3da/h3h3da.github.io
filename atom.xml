@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.rookiehacker.org/"/>
-  <updated>2020-02-20T09:33:24.428Z</updated>
+  <updated>2020-02-20T17:09:05.231Z</updated>
   <id>http://blog.rookiehacker.org/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SGX学习系列</title>
+    <link href="http://blog.rookiehacker.org/2020/02/21/SGXstudy/"/>
+    <id>http://blog.rookiehacker.org/2020/02/21/SGXstudy/</id>
+    <published>2020-02-20T17:04:02.000Z</published>
+    <updated>2020-02-20T17:09:05.231Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="必要的支持环境"><a href="#必要的支持环境" class="headerlink" title="必要的支持环境"></a>必要的支持环境</h2><p>1、CPU必须支持Intel SGX指令</p><p>2、系统BIOS必须支持Intel SGX</p><p>3、BIOS必须启用SGX</p><p>4、系统必须已安装Intel SGX Platform Software（PSW）</p><h2 id="SGX应用程序检查顺序"><a href="#SGX应用程序检查顺序" class="headerlink" title="SGX应用程序检查顺序"></a>SGX应用程序检查顺序</h2><h3 id="1-SGX应用安装程序的启动检查顺序"><a href="#1-SGX应用安装程序的启动检查顺序" class="headerlink" title="(1) SGX应用安装程序的启动检查顺序"></a>(1) SGX应用安装程序的启动检查顺序</h3><p>1、检查CPU和BISO是否支持Intel SGX</p><p>2、判断系统是否安装Intel SGX PSW，如果没安装则安装它</p><p>3、检查BIOS是否开启Intel SGX，如果没有，则尝试软件控制开启</p><h3 id="2-SGX应用程序本身的检查顺序"><a href="#2-SGX应用程序本身的检查顺序" class="headerlink" title="(2) SGX应用程序本身的检查顺序"></a>(2) SGX应用程序本身的检查顺序</h3><p>1、检查Intel SGX PSW是否安装</p><p>2、检查BIOS是否开启Intel SGX，如果没有，则尝试软件控制开启</p><h2 id="SGX应用程序设计"><a href="#SGX应用程序设计" class="headerlink" title="SGX应用程序设计"></a>SGX应用程序设计</h2><p>设计一个Intel SGX程序需要你把代码划分成不同部分，需要判断将哪些代码（数据）放在enclave中，哪些不需要放在里面以及可信部分和不可信部分间的交互。</p><p>划分的关键步骤：</p><p>1、确定机密信息</p><p>2、确定机密信息的提供者和使用者，画出机密数据在应用各个组件之间的流程图</p><p>3、确定enclave的边界，包含尽量多的机密信息，但是要尽可能保持小的体积</p><p>4、精简安全区代码，使安全区体积尽可能小，尽可能高校的利用有限的安全区资源，减少系统开销</p><h2 id="安全区enclave定义语言（EDL）"><a href="#安全区enclave定义语言（EDL）" class="headerlink" title="安全区enclave定义语言（EDL）"></a>安全区enclave定义语言（EDL）</h2><p>非安全区调用安全区函数（也是进去安全区的入口）称为E-Call（调用者在安全区外），安全区调用外部非安全区称为O-Call（调用者在安全区内）。这些ecall和ocall组成了安全区的接口。但是安全区的入口点和出口点都由CPU控制，即出入安全区需要执行特定的CPU指令。Intel SGX SDK对底层做了抽象来便于开发人员开发SGX程序。<br>工具Edger8r可以自动生成ecall和ocall的代理函数。Edger8r从EDL文件中读取安全区接口定义。EDL文件和C语言文件很类似，它分为两个部分，可信区和非可信区。E-call函数定义在可信区，O-call函数定义在非可信区。它包含了一些关键字，如：</p><p>public： 所有能被非可信程序调用的E-call都必须声明为public，每个安全区至少应有一个声明为public的E-call。不含public关键字的E-call只能被另一个O-call调用执行。</p><p>参数：传值，对应的封装处理应该是单向的；传引用，必须完整地描述数据的封装处理过程，即指针或者参数前用<code>[]</code>描述要封装处理的元素的传输方向以及数量等信息。<code>in</code>关键字意味着将数据封装送到e-call或者o-call和<code>out</code>关键字意味着数据从e-call或者o-call返回给调用函数。<code>out</code>关键字需要在调用e-call或者o-call前分配好数据缓冲区来存储返回的数据。<code>in</code>和<code>out</code>关键字可以同时指定在一个调用中，代表要进行两个方向的封送处理。在数量信息缺省情况下，Edger8r假定数据缓冲区等于参数的size，若传输数组等含有多个元素的数据，可以用<code>count</code>关键字来指定元素个数，也可以传给<code>count</code>一个函数参数来指明元素长度。<code>in</code>可以和<code>string</code>、<code>wstring</code>关键字配合使用来传字符串，但是<code>out</code>不能和它们一起使用。</p><h2 id="EDL进阶"><a href="#EDL进阶" class="headerlink" title="EDL进阶"></a>EDL进阶</h2><p>有时，传送指针时需要提供更多额外的信息或者对指针进行直接控制。把void空指针传给e-call或者o-call，无法确定void类型对应的数据的具体大小，因此无法计算封送处理的数据缓冲区大小。为了结局这个问题，EDL提供了<code>size</code>关键字，来指定单个元素的大小，来配合<code>in</code>、<code>out</code>、<code>count</code>等关键字来确定数据缓冲区的大小。若是仅希望把指针指向的地址传给e-call或者o-call，则需要使用<code>user_check</code>，这种情况下传递的指针对进行边界安全检查和数据封送处理，e-call或者o-call直接作用于指针地址。</p><p>声明为public的e-call又被称为root e-call，不含public的e-call只能被另一个o-call调用。缺省情况下（即o-call前没有声明类型），o-call不能调用任何e-call，必须使用<code>allow</code>关键字来指明允许调用的e-call的名称列表，此时o-call只允许调用这个名称列表中的e-call。</p><h2 id="SGX程序调试"><a href="#SGX程序调试" class="headerlink" title="SGX程序调试"></a>SGX程序调试</h2><p>Intel SGX安全区可以以debug模式或release模式构建。顾名思义，debug模式允许调试，你可以使用（只可以使用）Intel SGX debugger来进行调试。CPU允许运行任何以debug模式构建的安全区enclave，但是很显然，这些安全区都是不是安全的（因为SGX debugger可以控制）。所以生产环境下请不要部署debug模式的安全区enclave。相反，release模式的安全区无法进行调试。对安全区进行调试，需要CPU的指令支持，因此必须使用随Intel SGX SDK安装Intel SGX调试器。其他调试器只会跳过安全区代码，只有Intel SGX调试器才可以调试安全区代码，不同的编辑运行环境要对调试器进行相应的设置。</p><h2 id="Intel-SGX数据密封功能（data-sealing）"><a href="#Intel-SGX数据密封功能（data-sealing）" class="headerlink" title="Intel SGX数据密封功能（data sealing）"></a>Intel SGX数据密封功能（data sealing）</h2><p>当电脑进入睡眠、关机或者应用程序退出时，安全区enclave会被销毁，或者被应用程序显式销毁，从而丢失安全区中的数据。把安全区中的数据保存在非可信内存中并且保证数据的隐私性就需要Intel SGX的数据密封功能。数据密封使用从CPU得到的密钥在安全区内对数据进行加密，解密是只能在创建它的那台电脑上进行解密。当进行数据密封时，有两种密钥策略可被选择：</p><p>1、MRENCLAVE(安全区标识)：将生成一个该安全区独有的密钥，即只有同一台电脑的同一个安全区可以解封数据。</p><p>2、MRSIGNER(密封标识)：基于安全区密封授权方的密钥来生成一个密钥，这也使得一个安全区密封的数据可以被另一个安全区来解封，只要在同一台电脑上并且具有相同的密封授权方的密钥即可。MRSIGNER可以允许旧版本应用程序密封的数据被新版本应用程序或者其他版本的应用程序解封读取，也可以使用这种方法在两个不同的应用程序的两个不同的安全区中共享数据（只要在同一台电脑上）。</p><p>两种方法的相同点：</p><p>执行密封数据的电脑的指纹数据会作为密钥的一个输入，来保证只有在同一台电脑上才可以执行相应密封数据的解密。密钥的另一个数据则是安全区的debug模式或release模式。debug模式的安全区无法解封release模式构建的安全区密封的数据，反之亦然。这是为了防止Intel SGX调试器在调试debug模式的安全区时泄露来自release模式密封的安全区数据。</p><p>安全区enclave不会检查非可信应用程序的真实性，因此任何人任何程序都可以加载你的安全区，并且按照他们希望的顺序执行e-call。因此安全区的api不能因为数据密封和解封来泄露机密或者授予不该授予的权限。</p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="https://www.youtube.com/playlist?list=PLg-UKERBljNweaATkbbDCcEsRTADAzOl8" target="_blank" rel="noopener">Intel® Software Guard Extensions (Intel® SGX) | Intel Software</a></p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2020/02/21/SGXstudy/" title="SGX学习系列">SGX学习系列</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2020/02/21/SGXstudy/" title="SGX学习系列">http://blog.rookiehacker.org/2020/02/21/SGXstudy/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
+    
+    <summary type="html">
+    
+      SGX入门学习~
+    
+    </summary>
+    
+      <category term="SGX" scheme="http://blog.rookiehacker.org/categories/SGX/"/>
+    
+    
+      <category term="SGX" scheme="http://blog.rookiehacker.org/tags/SGX/"/>
+    
+  </entry>
   
   <entry>
     <title>一些CSDN干货资源</title>
@@ -422,11 +444,11 @@
       <category term="Python" scheme="http://blog.rookiehacker.org/categories/Python/"/>
     
     
-      <category term="Python" scheme="http://blog.rookiehacker.org/tags/Python/"/>
-    
       <category term="Chrome" scheme="http://blog.rookiehacker.org/tags/Chrome/"/>
     
       <category term="cookie" scheme="http://blog.rookiehacker.org/tags/cookie/"/>
+    
+      <category term="Python" scheme="http://blog.rookiehacker.org/tags/Python/"/>
     
       <category term="Django" scheme="http://blog.rookiehacker.org/tags/Django/"/>
     
@@ -455,36 +477,6 @@
       <category term="密码重置" scheme="http://blog.rookiehacker.org/tags/%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/"/>
     
       <category term="Metinfo" scheme="http://blog.rookiehacker.org/tags/Metinfo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【长亭时光】这些天我学到的东西</title>
-    <link href="http://blog.rookiehacker.org/2019/02/21/thedaysinchaitin/"/>
-    <id>http://blog.rookiehacker.org/2019/02/21/thedaysinchaitin/</id>
-    <published>2019-02-21T12:28:55.000Z</published>
-    <updated>2019-02-22T12:08:36.165Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=20744788&auto=0&height=66"></iframe><h1 id="关于工作"><a href="#关于工作" class="headerlink" title="关于工作"></a>关于工作</h1><h2 id="长亭"><a href="#长亭" class="headerlink" title="长亭"></a>长亭</h2><p><img src="http://rookiehacker.org:8888/images/2019/02/21/9790f484129544d14e09d1e2bb34e988.png" alt="我司Chaitin"><br>应该算是十分幸运吧，来到了大佬云集的<a href="https://www.chaitin.cn/" target="_blank" rel="noopener">长亭科技</a>，以后见了别人也可以吹吹牛逼啦O(∩_∩)O哈哈~，长亭的氛围真的好得不得了啊，到处都是大佬，工位对角就是朱文雷，楼下是我们的“车联网专家”杨坤博士，还有到处救火的“萌神”刘超，醒哥，扬神……突然感觉我好像连递茶的资格可能都不够哦。。在这样的氛围中，我真是不想成长都难啊。。并且长亭的福利也是超级棒，人手MacBook的标配（只不过实习生是Air，性能略辣鸡），免费工作餐让我吃得很“难瘦”，还有双休、房补······<br>哈哈，言归正传，简单介绍一下长亭吧，现在公司分成了几大部分：产品研发中心、销售服务中心、安全服务中心、市场营销中心、技术支持中心等。楼下大多是多年赛棍出身的白帽子大佬，楼上是负责开发的技术狂魔，我呢，在研发部搬砖，负责谛听产品的相关开发工作。大概就是这样子吧。<br><img src="http://rookiehacker.org:8888/images/2019/02/21/b7f82a70b62f5024eda10c9da957d6b5.png" alt="工作餐"><br><img src="http://rookiehacker.org:8888/images/2019/02/21/f831b47cde275d6c506faf4088921126.jpg" alt="我的工位"><br><img src="http://rookiehacker.org:8888/images/2019/02/21/939c724ddd7dbb6be46886f525df7554.jpg" alt="我的工牌"></p><h2 id="我的工作"><a href="#我的工作" class="headerlink" title="我的工作"></a>我的工作</h2><p>上面已经说了，我的工作主要是负责谛听的产品开发。谛听（D-Sensor）是一款内网威胁感知系统，利用欺骗伪装技术，通过布置陷阱、诱敌深入、记录路径、溯源取证，解决内网防护难以察觉、难以明确、难以追溯三大问题，赋予内网全新的主动对抗能力（抄自我司<a href="https://www.chaitin.cn/zh/dsensor" target="_blank" rel="noopener">官网</a>）。<br>不过主要的技术开发工作已经完成了，产品也已经上线一段时间了，我的工作就是根据用户的需求，对产品就行相应的升级开发，负责后端的开发工作，加入一些新的功能，来适应用户需求。开发的主要工具就是VS Code、docker、git，语言Python、Go（现在还未涉及，估计就要学一下Go了），来了之后用了两三天折腾环境，最后总算是跑起来了。。多亏大佬不嫌弃，教我这，教我那，可能这短短的一周学到的东西比我浪一年学得都多。。</p><h1 id="学到的东西"><a href="#学到的东西" class="headerlink" title="学到的东西"></a>学到的东西</h1><h2 id="Python-Django"><a href="#Python-Django" class="headerlink" title="Python + Django"></a>Python + Django</h2><p>年前就在看Django了，感觉Django真的很强大（其实感觉flask也不错），跟着网上的教程写了个个人博客，写完之后真让我有种立马上线自己用的冲动啊！！页面是我喜欢的精简风格，后台、平台、标签云、订阅等等几乎该涉及到的都涉及了，这里留下<a href="https://www.zmrenwu.com/post/2" target="_blank" rel="noopener">传送门</a>。<br>现在的工作也让自己对Django的框架进一步熟悉了（我好像泄露了什么。。。）</p><h2 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h2><p>docker-compose的使用（有时间学习一下写法），<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker-compose down      // 关闭容器</span><br><span class="line">docker-compose up -d     // 运行容器</span><br></pre></td></tr></table></figure></p><p>一定要记住在运行后，当不用时要及时在指定docker-compose.yml文件路径关闭容器，不然再其他地方使用docker-compose时可能会发生冲突。</p><p>关于docker，一直以为在python中pip install docker 就可以了，可见我是有多天真。。。<br>首先安装docker，running状态走起，然后就可以轻松愉快的部署开发项目了，真的是简单啊，这里熟悉了docker的一些基本的用法，<a href="http://www.runoob.com/docker/docker-tutorial.html" target="_blank" rel="noopener">docker教程</a>，有空补上！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker stop </span><br><span class="line">docker start</span><br><span class="line">docker ps</span><br><span class="line">docker exec -it imgname bash</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p><p>还有一些前端的工具，像npm、yarn等等<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn build</span><br><span class="line">TARGET=http://loaclhost:1234 TYPE=D yarn start   //  启动前端服务器</span><br></pre></td></tr></table></figure></p><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>关于git，还是有了解的，因为之前写博客啦，提交GitHub上面的项目什么的了，都要用到git，但是我的记性真的好差（怕不是老了？？？），准备考研这大半年没怎么动手了，操作也忘得差不多了。。来了让大佬手把手教，真的好尴尬￣□￣｜｜<br>这里不多说了，推荐一下<a href="ttps://www.liaoxuefeng.com" target="_blank" rel="noopener">廖雪峰的Git教程</a></p><h1 id="关于考研"><a href="#关于考研" class="headerlink" title="关于考研"></a>关于考研</h1><h2 id="成绩-准备复试"><a href="#成绩-准备复试" class="headerlink" title="成绩 + 准备复试"></a>成绩 + 准备复试</h2><p>晒一下成绩先。<br><img src="http://rookiehacker.org:8888/images/2019/02/21/9dba8b3a7fec2564d6c328873e5217a4.png" alt="我的成绩"><br>分数是不少了，可是今年分数真的爆炸，367排名238,350就排名到400了，今年软微收270还是好几个专业一起分名额，我在计算机技术专业课867里面排名115-120，如果能像去年那样分配一般的名额的话，那还有机会的，进复试应该没什么问题，所以接下来得好好准备了，这可是今年最大的愿望了，一定要实现！一定能实现！<br>不说了，好要上班，准备复试的时间太宝贵了，所以写完这篇就准备暂时封笔，等到复试结束吧！滚去看书了~</p><hr><blockquote><p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2019/02/21/thedaysinchaitin/" title="【长亭时光】这些天我学到的东西">【长亭时光】这些天我学到的东西</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2019/02/21/thedaysinchaitin/" title="【长亭时光】这些天我学到的东西">http://blog.rookiehacker.org/2019/02/21/thedaysinchaitin/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p></blockquote><hr><p><em>喜欢，就支持我一下吧~</em></p><hr><p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p><hr>]]></content>
-    
-    <summary type="html">
-    
-      来了一快两周了，总结一下收获吧~
-    
-    </summary>
-    
-      <category term="Python" scheme="http://blog.rookiehacker.org/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://blog.rookiehacker.org/tags/Python/"/>
-    
-      <category term="Django" scheme="http://blog.rookiehacker.org/tags/Django/"/>
-    
-      <category term="Docker" scheme="http://blog.rookiehacker.org/tags/Docker/"/>
-    
-      <category term="Git" scheme="http://blog.rookiehacker.org/tags/Git/"/>
-    
-      <category term="长亭" scheme="http://blog.rookiehacker.org/tags/%E9%95%BF%E4%BA%AD/"/>
     
   </entry>
   
