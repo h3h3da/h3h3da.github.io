@@ -194,9 +194,9 @@
     
       <category term="前端" scheme="http://blog.rookiehacker.org/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Windows" scheme="http://blog.rookiehacker.org/tags/Windows/"/>
-    
       <category term="漏洞" scheme="http://blog.rookiehacker.org/tags/%E6%BC%8F%E6%B4%9E/"/>
+    
+      <category term="Windows" scheme="http://blog.rookiehacker.org/tags/Windows/"/>
     
   </entry>
   
@@ -444,11 +444,11 @@
       <category term="Python" scheme="http://blog.rookiehacker.org/categories/Python/"/>
     
     
+      <category term="Python" scheme="http://blog.rookiehacker.org/tags/Python/"/>
+    
       <category term="Chrome" scheme="http://blog.rookiehacker.org/tags/Chrome/"/>
     
       <category term="cookie" scheme="http://blog.rookiehacker.org/tags/cookie/"/>
-    
-      <category term="Python" scheme="http://blog.rookiehacker.org/tags/Python/"/>
     
       <category term="Django" scheme="http://blog.rookiehacker.org/tags/Django/"/>
     
