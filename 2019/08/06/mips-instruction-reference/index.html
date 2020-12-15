@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="安全路上，菜鸟起飞~"><title>MIPS Instruction Reference | Louie Liu's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.3.1"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><meta name="generator" content="Hexo 5.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">MIPS Instruction Reference</h1><a id="logo" href="/.">Louie Liu's Blog</a><p class="description">小菜鸟的blog</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/history/"><i class="fa fa-book"> 历史</i></a><a href="/WooyunDrops/"><i class="fa fa-cloud"> WooYun</i></a><a href="/comments/"><i class="fa fa-comments"> 留言</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">MIPS Instruction Reference</h1><div class="post-meta">Aug 6, 2019<span> | </span><span class="category"><a href="/categories/MIPS/">MIPS</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> 阅读</span></span></div><a class="disqus-comment-count" href="/2019/08/06/mips-instruction-reference/#vcomment"><span class="valine-comment-count" data-xid="/2019/08/06/mips-instruction-reference/"></span><span>条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MIPS-Instruction-Reference"><span class="toc-number">1.</span> <span class="toc-text">MIPS Instruction Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MIPS-basic-content"><span class="toc-number">1.0.1.</span> <span class="toc-text">MIPS basic content.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-Register"><span class="toc-number">1.0.2.</span> <span class="toc-text">0x01 Register</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-General-purpose-registers"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">(1) General purpose registers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Special-registers"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">( 2 ) Special registers</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x2-Instruction-Instruction"><span class="toc-number">1.0.3.</span> <span class="toc-text">0x2 Instruction Instruction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reference"><span class="toc-number">1.0.4.</span> <span class="toc-text">Reference</span></a></li></ol></li></ol></li></ol></div></div><div class="post-content"><h1 id="MIPS-Instruction-Reference"><a href="#MIPS-Instruction-Reference" class="headerlink" title="MIPS Instruction Reference"></a>MIPS Instruction Reference</h1><h3 id="MIPS-basic-content"><a href="#MIPS-basic-content" class="headerlink" title="MIPS basic content."></a>MIPS basic content.</h3><p>This is based on MIPS32 as an introduction.上次帮<a href="https://ctf-wiki.github.io/ctf-wiki/assembly/mips/readme-zh/" target="_blank" rel="noopener">CTF-WIKI</a>重新整理了一下，这里也自己记录一下。</p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="安全路上，菜鸟起飞~"><title>MIPS Instruction Reference | h3h3da's Blog</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">MIPS Instruction Reference</h1><a id="logo" href="/.">h3h3da's Blog</a><p class="description">小菜鸟的blog</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/history/"><i class="fa fa-book"> 历史</i></a><a href="/WooyunDrops/"><i class="fa fa-cloud"> WooYun</i></a><a href="/comments/"><i class="fa fa-comments"> 留言</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">MIPS Instruction Reference</h1><div class="post-meta">2019-08-06<span> | </span><span class="category"><a href="/categories/MIPS/">MIPS</a></span></div><a class="disqus-comment-count" href="/2019/08/06/mips-instruction-reference/#vcomment"><span class="valine-comment-count" data-xid="/2019/08/06/mips-instruction-reference/"></span><span> 条评论</span></a><div class="clear"><div class="toc-article" id="toc"><div class="toc-title">文章目录</div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MIPS-Instruction-Reference"><span class="toc-number">1.</span> <span class="toc-text">MIPS Instruction Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MIPS-basic-content"><span class="toc-number">1.0.1.</span> <span class="toc-text">MIPS basic content.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x01-Register"><span class="toc-number">1.0.2.</span> <span class="toc-text">0x01 Register</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-General-purpose-registers"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">(1) General purpose registers</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Special-registers"><span class="toc-number">1.0.2.2.</span> <span class="toc-text">( 2 ) Special registers</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#0x2-Instruction-Instruction"><span class="toc-number">1.0.3.</span> <span class="toc-text">0x2 Instruction Instruction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reference"><span class="toc-number">1.0.4.</span> <span class="toc-text">Reference</span></a></li></ol></li></ol></li></ol></div></div><div class="post-content"><h1 id="MIPS-Instruction-Reference"><a href="#MIPS-Instruction-Reference" class="headerlink" title="MIPS Instruction Reference"></a>MIPS Instruction Reference</h1><h3 id="MIPS-basic-content"><a href="#MIPS-basic-content" class="headerlink" title="MIPS basic content."></a>MIPS basic content.</h3><p>This is based on MIPS32 as an introduction.上次帮<a target="_blank" rel="noopener" href="https://ctf-wiki.github.io/ctf-wiki/assembly/mips/readme-zh/">CTF-WIKI</a>重新整理了一下，这里也自己记录一下。</p>
 <h3 id="0x01-Register"><a href="#0x01-Register" class="headerlink" title="0x01 Register"></a>0x01 Register</h3><h4 id="1-General-purpose-registers"><a href="#1-General-purpose-registers" class="headerlink" title="(1) General purpose registers"></a>(1) General purpose registers</h4><p>MIPS has 32 general purpose registers, represented by the dollar sign ($). Can be expressed as $0~$31, and can also be represented by register names such as $sp, $t9, $fp, and so on.</p>
 <table>
 <thead>
@@ -9,8 +9,7 @@
 <th>Usage</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>$0</td>
 <td>$zero</td>
 <td>Hard-wired to 0</td>
@@ -62,13 +61,14 @@
 <td>$28</td>
 <td>$gp</td>
 <td>Global Area Pointer (base of global data segment)</td>
+<td></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>MIPS as a load-store architecture means that when we want to access memory we must access it through load and store instructions. All other instructions (add, sub, mul, div, and so on) must fetch their operands from the register and store their results in registers. For example, the following example:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum = x + y</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sum &#x3D; x + y</span><br></pre></td></tr></table></figure>
 <p>We assume that sum and x , y are variables in the program, and their MIPS assembly is expressed as:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># sum = x + y</span><br><span class="line"></span><br><span class="line">lw      $t0, x          # Load x from memory into a CPU register</span><br><span class="line">lw      $t1, y          # Load y from memory into a CPU register</span><br><span class="line">add     $t0, $t0, $t1   # Add x and y</span><br><span class="line">sw      $t0, sum        # Store the result from the CPU register to memory</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># sum &#x3D; x + y</span><br><span class="line"></span><br><span class="line">lw      $t0, x          # Load x from memory into a CPU register</span><br><span class="line">lw      $t1, y          # Load y from memory into a CPU register</span><br><span class="line">add     $t0, $t0, $t1   # Add x and y</span><br><span class="line">sw      $t0, sum        # Store the result from the CPU register to memory</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <h4 id="2-Special-registers"><a href="#2-Special-registers" class="headerlink" title="( 2 ) Special registers"></a>( 2 ) Special registers</h4><p>The MIPS32 architecture also defines three special registers, PC (program counter), HI (multiply and divide result high register), and LO (multiply and divide result low register). When multiplying, HI and LO hold the result of the multiplication, where HI holds the upper 32 bits and LO holds the lower 32 bits. In the division operation, HI saves the remainder and the LO saves the quotient.</p>
 <h3 id="0x2-Instruction-Instruction"><a href="#0x2-Instruction-Instruction" class="headerlink" title="0x2 Instruction Instruction"></a>0x2 Instruction Instruction</h3><p><strong>ADD – Add (with overflow)</strong></p>
 <table>
@@ -78,8 +78,7 @@
 <th>Adds two registers and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $s + $t; advance_pc (4);</td>
 </tr>
@@ -91,8 +90,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssh tttt dddd d000 0010 0000</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>ADDI – Add immediate (with overflow)</strong></p>
 <table>
 <thead>
@@ -101,8 +99,7 @@
 <th>Adds a register and a sign-extended immediate value and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$t = $s + imm; advance_pc (4);</td>
 </tr>
@@ -114,8 +111,7 @@
 <td>Encoding:</td>
 <td><code>0010 00ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>ADDIU – Add immediate unsigned (no overflow)</strong></p>
 <table>
 <thead>
@@ -124,8 +120,7 @@
 <th>Adds a register and a sign-extended immediate value and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$t = $s + imm; advance_pc (4);</td>
 </tr>
@@ -137,8 +132,7 @@
 <td>Encoding:</td>
 <td><code>0010 01ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>ADDU – Add unsigned (no overflow)</strong></p>
 <table>
 <thead>
@@ -147,8 +141,7 @@
 <th>Adds two registers and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $s + $t; advance_pc (4);</td>
 </tr>
@@ -160,8 +153,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d000 0010 0001</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>AND – Bitwise and</strong></p>
 <table>
 <thead>
@@ -170,8 +162,7 @@
 <th>Bitwise ands two registers and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $s &amp; $t; advance_pc (4);</td>
 </tr>
@@ -183,8 +174,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d000 0010 0100</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>ANDI – Bitwise and immediate</strong></p>
 <table>
 <thead>
@@ -193,8 +183,7 @@
 <th>Bitwise ands a register and an immediate value and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$t = $s &amp; imm; advance_pc (4);</td>
 </tr>
@@ -206,8 +195,7 @@
 <td>Encoding:</td>
 <td><code>0011 00ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>BEQ – Branch on equal</strong></p>
 <table>
 <thead>
@@ -216,8 +204,7 @@
 <th>Branches if the two registers are equal</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s == $t advance_pc (offset &lt;&lt; 2)); else advance_pc (4);</td>
 </tr>
@@ -229,8 +216,7 @@
 <td>Encoding:</td>
 <td><code>0001 00ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>BGEZ – Branch on greater than or equal to zero</strong></p>
 <table>
 <thead>
@@ -239,8 +225,7 @@
 <th>Branches if the register is greater than or equal to zero</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &gt;= 0 advance_pc (offset &lt;&lt; 2)); else advance_pc (4);</td>
 </tr>
@@ -252,8 +237,7 @@
 <td>Encoding:</td>
 <td><code>0000 01ss sss0 0001 iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>BGEZAL – Branch on greater than or equal to zero and link</strong></p>
 <table>
 <thead>
@@ -262,8 +246,7 @@
 <th>Branches if the register is greater than or equal to zero and saves the return address in $31</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &gt;= 0 $31 = PC + 8 (or nPC + 4); advance_pc (offset &lt;&lt; 2)); else advance_pc (4);</td>
 </tr>
@@ -275,8 +258,7 @@
 <td>Encoding:</td>
 <td><code>0000 01ss sss1 0001 iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>BGTZ – Branch on greater than zero</strong></p>
 <table>
 <thead>
@@ -285,8 +267,7 @@
 <th>Branches if the register is greater than zero</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &gt; 0 advance_pc (offset &lt;&lt; 2)); else advance_pc (4);</td>
 </tr>
@@ -298,8 +279,7 @@
 <td>Encoding:</td>
 <td><code>0001 11ss sss0 0000 iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>BLEZ – Branch on less than or equal to zero</strong></p>
 <table>
 <thead>
@@ -308,8 +288,7 @@
 <th>Branches if the register is less than or equal to zero</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &lt;= 0 advance_pc (offset &lt;&lt; 2)); else advance_pc (4);</td>
 </tr>
@@ -321,8 +300,7 @@
 <td>Encoding:</td>
 <td><code>0001 10ss sss0 0000 iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>BLTZ – Branch on less than zero</strong></p>
 <table>
 <thead>
@@ -331,8 +309,7 @@
 <th>Branches if the register is less than zero</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &lt; 0 advance_pc (offset &lt;&lt; 2)); else advance_pc (4);</td>
 </tr>
@@ -344,8 +321,7 @@
 <td>Encoding:</td>
 <td><code>0000 01ss sss0 0000 iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>BLTZAL – Branch on less than zero and link</strong></p>
 <table>
 <thead>
@@ -354,8 +330,7 @@
 <th>Branches if the register is less than zero and saves the return address in $31</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &lt; 0 $31 = PC + 8 (or nPC + 4); advance_pc (offset &lt;&lt; 2)); else advance_pc (4);</td>
 </tr>
@@ -367,8 +342,7 @@
 <td>Encoding:</td>
 <td><code>0000 01ss sss1 0000 iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>BNE – Branch on not equal</strong></p>
 <table>
 <thead>
@@ -377,8 +351,7 @@
 <th>Branches if the two registers are not equal</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s != $t advance_pc (offset &lt;&lt; 2)); else advance_pc (4);</td>
 </tr>
@@ -390,8 +363,7 @@
 <td>Encoding:</td>
 <td><code>0001 01ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>DIV – Divide</strong></p>
 <table>
 <thead>
@@ -400,8 +372,7 @@
 <th>Divides $s by $t and stores the quotient in $LO and the remainder in $HI</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$LO = $s / $t; $HI = $s % $t; advance_pc (4);</td>
 </tr>
@@ -413,8 +384,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt 0000 0000 0001 1010</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>DIVU - Divide unsigned</strong></p>
 <table>
 <thead>
@@ -423,8 +393,7 @@
 <th>Divides $s by $t and stores the quotient in $LO and the remainder in $HI</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$LO = $s / $t; $HI = $s % $t; advance_pc (4);</td>
 </tr>
@@ -436,8 +405,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt 0000 0000 0001 1011</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>J – Jump</strong></p>
 <table>
 <thead>
@@ -446,8 +414,7 @@
 <th>Jumps to the calculated address</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>PC = nPC; nPC = (PC &amp; 0xf0000000) l (target &lt;&lt; 2);</td>
 </tr>
@@ -459,8 +426,7 @@
 <td>Encoding:</td>
 <td><code>0000 10ii iiii iiii iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>JAL – Jump and link</strong></p>
 <table>
 <thead>
@@ -469,8 +435,7 @@
 <th>Jumps to the calculated address and stores the return address in $31</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$31 = PC + 8 (or nPC + 4); PC = nPC; nPC = (PC &amp; 0xf0000000) l (target &lt;&lt; 2);</td>
 </tr>
@@ -482,8 +447,7 @@
 <td>Encoding:</td>
 <td><code>0000 11ii iiii iiii iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>JR – Jump register</strong></p>
 <table>
 <thead>
@@ -492,8 +456,7 @@
 <th>Jump to the address contained in register $s</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>PC = nPC; nPC = $s;</td>
 </tr>
@@ -505,8 +468,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss sss0 0000 0000 0000 0000 1000</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>LB – Load byte</strong></p>
 <table>
 <thead>
@@ -515,21 +477,19 @@
 <th>A byte is loaded into a register from the specified address.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
-<td>$t = MEM[\$s + offset]; advance_pc (4);</td>
+<td>$t = MEM[$s + offset]; advance_pc (4);</td>
 </tr>
 <tr>
 <td>Syntax:</td>
-<td>lb $t, offset(\$s)</td>
+<td>lb $t, offset($s)</td>
 </tr>
 <tr>
 <td>Encoding:</td>
 <td><code>1000 00ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>LUI – Load upper immediate</strong></p>
 <table>
 <thead>
@@ -538,8 +498,7 @@
 <th>The immediate value is shifted left 16 bits and stored in the register. The lower 16 bits are zeroes.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$t = (imm &lt;&lt; 16); advance_pc (4);</td>
 </tr>
@@ -551,8 +510,7 @@
 <td>Encoding:</td>
 <td><code>0011 11-- ---t tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>LW – Load word</strong></p>
 <table>
 <thead>
@@ -561,21 +519,19 @@
 <th>A word is loaded into a register from the specified address.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
-<td>$t = MEM[\$s + offset]; advance_pc (4);</td>
+<td>$t = MEM[$s + offset]; advance_pc (4);</td>
 </tr>
 <tr>
 <td>Syntax:</td>
-<td>lw $t, offset(\$s)</td>
+<td>lw $t, offset($s)</td>
 </tr>
 <tr>
 <td>Encoding:</td>
 <td><code>1000 11ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>MFHI – Move from HI</strong></p>
 <table>
 <thead>
@@ -584,8 +540,7 @@
 <th>The contents of register HI are moved to the specified register.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $HI; advance_pc (4);</td>
 </tr>
@@ -597,8 +552,7 @@
 <td>Encoding:</td>
 <td><code>0000 0000 0000 0000 dddd d000 0001 0000</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>MFLO – Move from LO</strong></p>
 <table>
 <thead>
@@ -607,8 +561,7 @@
 <th>The contents of register LO are moved to the specified register.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $LO; advance_pc (4);</td>
 </tr>
@@ -620,8 +573,7 @@
 <td>Encoding:</td>
 <td><code>0000 0000 0000 0000 dddd d000 0001 0010</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>MULT - Multiply</strong></p>
 <table>
 <thead>
@@ -630,8 +582,7 @@
 <th>Multiplies $s by $t and stores the result in $LO.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$LO = $s * $t; advance_pc (4);</td>
 </tr>
@@ -643,8 +594,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt 0000 0000 0001 1000</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>MULTU - Multiply unsigned</strong></p>
 <table>
 <thead>
@@ -653,8 +603,7 @@
 <th>Multiplies $s by $t and stores the result in $LO.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$LO = $s * $t; advance_pc (4);</td>
 </tr>
@@ -666,8 +615,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt 0000 0000 0001 1001</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>NOOP – no operation</strong></p>
 <table>
 <thead>
@@ -676,8 +624,7 @@
 <th>Performs no operation.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>advance_pc (4);</td>
 </tr>
@@ -689,8 +636,7 @@
 <td>Encoding:</td>
 <td><code>0000 0000 0000 0000 0000 0000 0000 0000</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>Note: The encoding for a NOOP represents the instruction SLL $0, $0, 0 which has no side effects. In fact, nearly every instruction that has $0 as its destination register will have no side effect and can thus be considered a NOOP instruction.</p>
 <p> <strong>OR – Bitwise or</strong></p>
 <table>
@@ -700,8 +646,7 @@
 <th>Bitwise logical ors two registers and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $s l $t; advance_pc (4);</td>
 </tr>
@@ -713,8 +658,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d000 0010 0101</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>ORI – Bitwise or immediate</strong></p>
 <table>
 <thead>
@@ -723,8 +667,7 @@
 <th>Bitwise ors a register and an immediate value and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$t = $s l imm; advance_pc (4);</td>
 </tr>
@@ -736,8 +679,7 @@
 <td>Encoding:</td>
 <td><code>0011 01ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SB – Store byte</strong></p>
 <table>
 <thead>
@@ -746,21 +688,19 @@
 <th>The least significant byte of $t is stored at the specified address.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
-<td>MEM[\$s + offset] = (0xff &amp; $t); advance_pc (4);</td>
+<td>MEM[$s + offset] = (0xff &amp; $t); advance_pc (4);</td>
 </tr>
 <tr>
 <td>Syntax:</td>
-<td>sb $t, offset(\$s)</td>
+<td>sb $t, offset($s)</td>
 </tr>
 <tr>
 <td>Encoding:</td>
 <td><code>1010 00ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SLL – Shift left logical</strong></p>
 <table>
 <thead>
@@ -769,8 +709,7 @@
 <th>Shifts a register value left by the shift amount listed in the instruction and places the result in a third register. Zeroes are shifted in.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $t &lt;&lt; h; advance_pc (4);</td>
 </tr>
@@ -782,8 +721,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd dhhh hh00 0000</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SLLV – Shift left logical variable</strong></p>
 <table>
 <thead>
@@ -792,8 +730,7 @@
 <th>Shifts a register value left by the value in a second register and places the result in a third register. Zeroes are shifted in.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $t &lt;&lt; $s; advance_pc (4);</td>
 </tr>
@@ -805,8 +742,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d--- --00 0100</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SLT – Set on less than (signed)</strong></p>
 <table>
 <thead>
@@ -815,8 +751,7 @@
 <th>If $s is less than $t, $d is set to one. It gets zero otherwise.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &lt; $t $d = 1; advance_pc (4); else $d = 0; advance_pc (4);</td>
 </tr>
@@ -828,8 +763,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d000 0010 1010</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SLTI – Set on less than immediate (signed)</strong></p>
 <table>
 <thead>
@@ -838,8 +772,7 @@
 <th>If $s is less than immediate, $t is set to one. It gets zero otherwise.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &lt; imm $t = 1; advance_pc (4); else $t = 0; advance_pc (4);</td>
 </tr>
@@ -851,8 +784,7 @@
 <td>Encoding:</td>
 <td><code>0010 10ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SLTIU – Set on less than immediate unsigned</strong></p>
 <table>
 <thead>
@@ -861,8 +793,7 @@
 <th>If $s is less than the unsigned immediate, $t is set to one. It gets zero otherwise.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &lt; imm $t = 1; advance_pc (4); else $t = 0; advance_pc (4);</td>
 </tr>
@@ -874,8 +805,7 @@
 <td>Encoding:</td>
 <td><code>0010 11ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SLTU – Set on less than unsigned</strong></p>
 <table>
 <thead>
@@ -884,8 +814,7 @@
 <th>If $s is less than $t, $d is set to one. It gets zero otherwise.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>if $s &lt; $t $d = 1; advance_pc (4); else $d = 0; advance_pc (4);</td>
 </tr>
@@ -897,8 +826,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d000 0010 1011</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SRA – Shift right arithmetic</strong></p>
 <table>
 <thead>
@@ -907,8 +835,7 @@
 <th>Shifts a register value right by the shift amount (shamt) and places the value in the destination register. The sign bit is shifted in.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $t &gt;&gt; h; advance_pc (4);</td>
 </tr>
@@ -920,8 +847,7 @@
 <td>Encoding:</td>
 <td><code>0000 00-- ---t tttt dddd dhhh hh00 0011</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SRL – Shift right logical</strong></p>
 <table>
 <thead>
@@ -930,8 +856,7 @@
 <th>Shifts a register value right by the shift amount (shamt) and places the value in the destination register. Zeroes are shifted in.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $t &gt;&gt; h; advance_pc (4);</td>
 </tr>
@@ -943,8 +868,7 @@
 <td>Encoding:</td>
 <td><code>0000 00-- ---t tttt dddd dhhh hh00 0010</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SRLV – Shift right logical variable</strong></p>
 <table>
 <thead>
@@ -953,8 +877,7 @@
 <th>Shifts a register value right by the amount specified in $s and places the value in the destination register. Zeroes are shifted in.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $t &gt;&gt; $s; advance_pc (4);</td>
 </tr>
@@ -966,8 +889,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d000 0000 0110</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SUB – Subtract</strong></p>
 <table>
 <thead>
@@ -976,8 +898,7 @@
 <th>Subtracts two registers and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $s - $t; advance_pc (4);</td>
 </tr>
@@ -989,8 +910,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d000 0010 0010</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SUBU – Subtract unsigned</strong></p>
 <table>
 <thead>
@@ -999,8 +919,7 @@
 <th>Subtracts two registers and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $s - $t; advance_pc (4);</td>
 </tr>
@@ -1012,8 +931,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d000 0010 0011</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SW – Store word</strong></p>
 <table>
 <thead>
@@ -1022,21 +940,19 @@
 <th>The contents of $t is stored at the specified address.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
-<td>MEM[\$s + offset] = $t; advance_pc (4);</td>
+<td>MEM[$s + offset] = $t; advance_pc (4);</td>
 </tr>
 <tr>
 <td>Syntax:</td>
-<td>sw $t, offset(\$s)</td>
+<td>sw $t, offset($s)</td>
 </tr>
 <tr>
 <td>Encoding:</td>
 <td><code>1010 11ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>SYSCALL – System call</strong></p>
 <table>
 <thead>
@@ -1045,8 +961,7 @@
 <th>Generates a software interrupt.</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>advance_pc (4);</td>
 </tr>
@@ -1058,8 +973,7 @@
 <td>Encoding:</td>
 <td><code>0000 00-- ---- ---- ---- ---- --00 1100</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>XOR – Bitwise exclusive or</strong></p>
 <table>
 <thead>
@@ -1068,8 +982,7 @@
 <th>Exclusive ors two registers and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$d = $s ^ $t; advance_pc (4);</td>
 </tr>
@@ -1081,8 +994,7 @@
 <td>Encoding:</td>
 <td><code>0000 00ss ssst tttt dddd d--- --10 0110</code></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p><strong>XORI – Bitwise exclusive or immediate</strong></p>
 <table>
 <thead>
@@ -1091,8 +1003,7 @@
 <th>Bitwise exclusive ors a register and an immediate value and stores the result in a register</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>Operation:</td>
 <td>$t = $s ^ imm; advance_pc (4);</td>
 </tr>
@@ -1104,20 +1015,19 @@
 <td>Encoding:</td>
 <td><code>0011 10ss ssst tttt iiii iiii iiii iiii</code></td>
 </tr>
-</tbody>
-</table>
-<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a href="http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html" target="_blank" rel="noopener">MIPS Instruction Reference</a></p>
+</tbody></table>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><p><a target="_blank" rel="noopener" href="http://www.mrc.uidaho.edu/mrc/people/jff/digital/MIPSir.html">MIPS Instruction Reference</a></p>
 <hr>
 <blockquote>
-<p><em>声明：</em><br>文章标题：<a href="http://blog.rookiehacker.org/2019/08/06/mips-instruction-reference/" title="MIPS Instruction Reference">MIPS Instruction Reference</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href="http://blog.rookiehacker.org/2019/08/06/mips-instruction-reference/" title="MIPS Instruction Reference">http://blog.rookiehacker.org/2019/08/06/mips-instruction-reference/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p>
+<p><em>声明：</em><br>文章标题：<a href='http://blog.rookiehacker.org/2019/08/06/mips-instruction-reference/' title='MIPS Instruction Reference' >MIPS Instruction Reference</a><br>文章作者：<a href="http://blog.rookiehacker.org/about/">RookieHacker</a><br>文章链接：<a href='http://blog.rookiehacker.org/2019/08/06/mips-instruction-reference/' title='MIPS Instruction Reference' >http://blog.rookiehacker.org/2019/08/06/mips-instruction-reference/</a><br>文章版权属本博主所有，有问题或者建议欢迎在下方评论。欢迎转载、引用，但请标明作者和原文地址，谢谢。</p>
 </blockquote>
 <hr>
 <p><em>喜欢，就支持我一下吧~</em></p>
 <hr>
-<p><iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe></p>
-<hr>
-</div><div class="tags"><a href="/tags/MIPS/">MIPS</a></div><div class="post-nav"><a class="pre" href="/2019/08/08/docker-study/">Docker 学习笔记</a><a class="next" href="/2019/07/21/somethingaboutkaoyan/">【考研之路】关于考研的一些问题</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == true ? true : false;
-var verify = 'false' == true ? true : false;
+<iframe src="http://blog.rookiehacker.org/donate-page/simple/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+***
+</div><div class="tags"><a href="/tags/MIPS/"><i class="fa fa-tag"></i>MIPS</a></div><div class="post-nav"><a class="pre" href="/2019/08/08/docker-study/">Docker 学习笔记</a><a class="next" href="/2019/07/21/somethingaboutkaoyan/">【考研之路】关于考研的一些问题</a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
 var GUEST_INFO = ['nick','mail','link'];
 var guest_info = 'nick,mail,link'.split(',').filter(function(item){
   return GUEST_INFO.indexOf(item) > -1
@@ -1133,4 +1043,5 @@ window.valine = new Valine({
   avatar:'mm',
   guest_info:guest_info,
   pageSize:'10'
-})</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://blog.rookiehacker.org"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/">CTF</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/DDos%E6%94%BB%E5%87%BB/">DDos攻击</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/MIPS/">MIPS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/SGX/">SGX</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E6%B8%97%E9%80%8F/">Web渗透</a><span class="category-list-count">11</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81%E7%A8%8B%E5%BA%8F/">代码程序</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8E%A2%E7%B4%A2/">前端探索</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B/">励志故事</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/">工具分享</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E5%88%86%E4%BA%AB/">教程分享</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a><span class="category-list-count">33</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%97%85%E6%AF%92%E5%88%86%E6%9E%90/">病毒分析</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%80%83%E7%A0%94/">考研</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a><span class="category-list-count">1</span></li></ul></div><tag class="pug"><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 25px;">生活</a> <a href="/tags/%E6%84%9F%E6%83%B3/" style="font-size: 17px;">感想</a> <a href="/tags/%E6%83%85%E6%84%9F/" style="font-size: 16px;">情感</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 16px;">工具</a> <a href="/tags/CTF/" style="font-size: 19px;">CTF</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 15px;">励志</a> <a href="/tags/%E8%AF%BA%E5%A5%96/" style="font-size: 15px;">诺奖</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/" style="font-size: 15px;">计算机组成</a> <a href="/tags/LeetCode/" style="font-size: 15px;">LeetCode</a> <a href="/tags/SGX/" style="font-size: 15px;">SGX</a> <a href="/tags/%E8%80%83%E7%A0%94/" style="font-size: 18px;">考研</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Web/" style="font-size: 22px;">Web</a> <a href="/tags/Burpsuite/" style="font-size: 15px;">Burpsuite</a> <a href="/tags/%E7%A4%BE%E5%B7%A5/" style="font-size: 15px;">社工</a> <a href="/tags/Brainfuck/" style="font-size: 15px;">Brainfuck</a> <a href="/tags/%E8%AF%AD%E8%A8%80/" style="font-size: 15px;">语言</a> <a href="/tags/Music/" style="font-size: 17px;">Music</a> <a href="/tags/C/" style="font-size: 16px;">C++</a> <a href="/tags/C/" style="font-size: 16px;">C</a> <a href="/tags/JAVA/" style="font-size: 15px;">JAVA</a> <a href="/tags/Python/" style="font-size: 21px;">Python</a> <a href="/tags/Chrome/" style="font-size: 15px;">Chrome</a> <a href="/tags/cookie/" style="font-size: 15px;">cookie</a> <a href="/tags/Django/" style="font-size: 18px;">Django</a> <a href="/tags/Docker/" style="font-size: 16px;">Docker</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 24px;">实习</a> <a href="/tags/%E6%96%B9%E7%A8%8B%E5%BC%8F/" style="font-size: 15px;">方程式</a> <a href="/tags/%E6%B8%97%E9%80%8F/" style="font-size: 23px;">渗透</a> <a href="/tags/Windows/" style="font-size: 18px;">Windows</a> <a href="/tags/%E6%BC%8F%E6%B4%9E/" style="font-size: 17px;">漏洞</a> <a href="/tags/web/" style="font-size: 15px;">web</a> <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" style="font-size: 15px;">研究生</a> <a href="/tags/Hacker101/" style="font-size: 15px;">Hacker101</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 15px;">面试</a> <a href="/tags/offer/" style="font-size: 15px;">offer</a> <a href="/tags/test/" style="font-size: 15px;">test</a> <a href="/tags/Blog/" style="font-size: 16px;">Blog</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/Gitpage/" style="font-size: 15px;">Gitpage</a> <a href="/tags/Https/" style="font-size: 15px;">Https</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 16px;">算法</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 16px;">随笔</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 16px;">前端</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/IP/" style="font-size: 15px;">IP</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 16px;">编程</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 15px;">代码</a> <a href="/tags/Memcached/" style="font-size: 15px;">Memcached</a> <a href="/tags/DRDos/" style="font-size: 15px;">DRDos</a> <a href="/tags/DDos/" style="font-size: 15px;">DDos</a> <a href="/tags/MIPS/" style="font-size: 15px;">MIPS</a> <a href="/tags/%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/" style="font-size: 15px;">密码重置</a> <a href="/tags/Metinfo/" style="font-size: 15px;">Metinfo</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 15px;">电影</a> <a href="/tags/Sqlmap/" style="font-size: 15px;">Sqlmap</a> <a href="/tags/%E6%B3%A8%E5%85%A5/" style="font-size: 15px;">注入</a> <a href="/tags/Struts2/" style="font-size: 15px;">Struts2</a> <a href="/tags/POC/" style="font-size: 15px;">POC</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/%E9%95%BF%E4%BA%AD/" style="font-size: 15px;">长亭</a> <a href="/tags/%E7%97%85%E6%AF%92/" style="font-size: 15px;">病毒</a> <a href="/tags/%E8%A0%95%E8%99%AB/" style="font-size: 15px;">蠕虫</a> <a href="/tags/WooYun/" style="font-size: 16px;">WooYun</a> <a href="/tags/%E7%A0%B4%E8%A7%A3/" style="font-size: 16px;">破解</a> <a href="/tags/kali/" style="font-size: 15px;">kali</a> <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/" style="font-size: 15px;">双系统</a> <a href="/tags/WordPress/" style="font-size: 17px;">WordPress</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 15px;">教程</a> <a href="/tags/RCE/" style="font-size: 15px;">RCE</a></div></div></tag><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/06/28/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/09/hacker101ctf/">Hacker101 CTF WriteUp</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/SGXstudy/">SGX学习系列</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/20/someresourse/">一些CSDN干货资源</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/11/first-semester/">第一学期总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/05/hungary-algorithm/">匈牙利算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/05/simplex-algorithm/">单纯形法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/30/2019-year-end-summary/">2019年终总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/08/renderandajax/">Django使用ajax后调用render前端无法跳转</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/08/docker-study/">Docker 学习笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://ctf.rookiehacker.org" title="CTF平台" target="_blank">CTF平台</a><ul></ul><a href="http://rookiehacker.coding.me" title="RookieHacker" target="_blank">RookieHacker</a><ul></ul><a href="http://www.bugku.com/" title="CTF论坛" target="_blank">CTF论坛</a><ul></ul><a href="https://virusdefender.net" title="virusdefender's blog" target="_blank">virusdefender's blog</a><ul></ul><a href="http://www.lijiejie.com/" title="李劼杰的博客" target="_blank">李劼杰的博客</a><ul></ul><a href="http://bestwing.me/" title="Swing's Blog" target="_blank">Swing's Blog</a><ul></ul><a href="https://www.bugku.com/" title="Harry's Blog" target="_blank">Harry's Blog</a><ul></ul><a href="https://rawidn.com/" title="Rawidn" target="_blank">Rawidn</a><ul></ul><a href="http://白帽黑客.com/" title="白帽黑客" target="_blank">白帽黑客</a><ul></ul><a href="http://www.hzwang.top/" title="无尘" target="_blank">无尘</a><ul></ul><a href="http://www.fjhack.me/" title="枫叶的家" target="_blank">枫叶的家</a><ul></ul><a href="https://14u9h.github.io/lib-Blog/" title="Lau9h-Paper" target="_blank">Lau9h-Paper</a><ul></ul><a href="https://boominy.github.io/" title="BooMiny" target="_blank">BooMiny</a><ul></ul><a href="https://zheyaoa.github.io" title="余雨欣的博客" target="_blank">余雨欣的博客</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">Louie Liu's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> </a><a rel="nofollow" target="_blank" href="http://www.miibeian.gov.cn/"> 鲁ICP备15000385号-2.</a><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></div></script>  <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量<span id="busuanzi_value_site_pv"></span>次</div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=2.3.1" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=2.3.1" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.2.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=2.3.1"></script><script type="text/javascript" src="/js/smartresize.js?v=2.3.1"></script></div></body></html>
+})
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://blog.rookiehacker.org"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CTF/">CTF</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DDos%E6%94%BB%E5%87%BB/">DDos攻击</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/LeetCode/">LeetCode</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MIPS/">MIPS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Music/">Music</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SGX/">SGX</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web%E6%B8%97%E9%80%8F/">Web渗透</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E4%BB%A3%E7%A0%81%E7%A8%8B%E5%BA%8F/">代码程序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF%E6%8E%A2%E7%B4%A2/">前端探索</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8A%B1%E5%BF%97%E6%95%85%E4%BA%8B/">励志故事</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/">工具分享</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">操作系统</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B%E5%88%86%E4%BA%AB/">教程分享</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%9F%E6%B4%BB/">生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%97%85%E6%AF%92%E5%88%86%E6%9E%90/">病毒分析</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%80%83%E7%A0%94/">考研</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E7%94%9F%E6%B4%BB/" style="font-size: 15px;">生活</a> <a href="/tags/%E6%84%9F%E6%83%B3/" style="font-size: 15px;">感想</a> <a href="/tags/%E6%83%85%E6%84%9F/" style="font-size: 15px;">情感</a> <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 15px;">工具</a> <a href="/tags/CTF/" style="font-size: 15px;">CTF</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90/" style="font-size: 15px;">计算机组成</a> <a href="/tags/LeetCode/" style="font-size: 15px;">LeetCode</a> <a href="/tags/SGX/" style="font-size: 15px;">SGX</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/%E8%80%83%E7%A0%94/" style="font-size: 15px;">考研</a> <a href="/tags/Brainfuck/" style="font-size: 15px;">Brainfuck</a> <a href="/tags/%E8%AF%AD%E8%A8%80/" style="font-size: 15px;">语言</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/C/" style="font-size: 15px;">C</a> <a href="/tags/JAVA/" style="font-size: 15px;">JAVA</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Web/" style="font-size: 15px;">Web</a> <a href="/tags/Burpsuite/" style="font-size: 15px;">Burpsuite</a> <a href="/tags/%E7%A4%BE%E5%B7%A5/" style="font-size: 15px;">社工</a> <a href="/tags/Music/" style="font-size: 15px;">Music</a> <a href="/tags/Chrome/" style="font-size: 15px;">Chrome</a> <a href="/tags/cookie/" style="font-size: 15px;">cookie</a> <a href="/tags/Django/" style="font-size: 15px;">Django</a> <a href="/tags/Docker/" style="font-size: 15px;">Docker</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 15px;">实习</a> <a href="/tags/web/" style="font-size: 15px;">web</a> <a href="/tags/%E6%B8%97%E9%80%8F/" style="font-size: 15px;">渗透</a> <a href="/tags/%E6%96%B9%E7%A8%8B%E5%BC%8F/" style="font-size: 15px;">方程式</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/%E6%BC%8F%E6%B4%9E/" style="font-size: 15px;">漏洞</a> <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/" style="font-size: 15px;">研究生</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 15px;">面试</a> <a href="/tags/offer/" style="font-size: 15px;">offer</a> <a href="/tags/Hacker101/" style="font-size: 15px;">Hacker101</a> <a href="/tags/test/" style="font-size: 15px;">test</a> <a href="/tags/Blog/" style="font-size: 15px;">Blog</a> <a href="/tags/Github/" style="font-size: 15px;">Github</a> <a href="/tags/Gitpage/" style="font-size: 15px;">Gitpage</a> <a href="/tags/Https/" style="font-size: 15px;">Https</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 15px;">前端</a> <a href="/tags/HTML/" style="font-size: 15px;">HTML</a> <a href="/tags/IP/" style="font-size: 15px;">IP</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 15px;">算法</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 15px;">随笔</a> <a href="/tags/Memcached/" style="font-size: 15px;">Memcached</a> <a href="/tags/DRDos/" style="font-size: 15px;">DRDos</a> <a href="/tags/DDos/" style="font-size: 15px;">DDos</a> <a href="/tags/%E5%AF%86%E7%A0%81%E9%87%8D%E7%BD%AE/" style="font-size: 15px;">密码重置</a> <a href="/tags/Metinfo/" style="font-size: 15px;">Metinfo</a> <a href="/tags/%E7%94%B5%E5%BD%B1/" style="font-size: 15px;">电影</a> <a href="/tags/Sqlmap/" style="font-size: 15px;">Sqlmap</a> <a href="/tags/%E6%B3%A8%E5%85%A5/" style="font-size: 15px;">注入</a> <a href="/tags/Struts2/" style="font-size: 15px;">Struts2</a> <a href="/tags/POC/" style="font-size: 15px;">POC</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/%E9%95%BF%E4%BA%AD/" style="font-size: 15px;">长亭</a> <a href="/tags/%E7%97%85%E6%AF%92/" style="font-size: 15px;">病毒</a> <a href="/tags/%E8%A0%95%E8%99%AB/" style="font-size: 15px;">蠕虫</a> <a href="/tags/%E7%A0%B4%E8%A7%A3/" style="font-size: 15px;">破解</a> <a href="/tags/kali/" style="font-size: 15px;">kali</a> <a href="/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/" style="font-size: 15px;">双系统</a> <a href="/tags/WooYun/" style="font-size: 15px;">WooYun</a> <a href="/tags/WordPress/" style="font-size: 15px;">WordPress</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 15px;">教程</a> <a href="/tags/RCE/" style="font-size: 15px;">RCE</a> <a href="/tags/%E5%8A%B1%E5%BF%97/" style="font-size: 15px;">励志</a> <a href="/tags/%E8%AF%BA%E5%A5%96/" style="font-size: 15px;">诺奖</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 15px;">编程</a> <a href="/tags/%E4%BB%A3%E7%A0%81/" style="font-size: 15px;">代码</a> <a href="/tags/MIPS/" style="font-size: 15px;">MIPS</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/06/28/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/09/hacker101ctf/">Hacker101 CTF WriteUp</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/21/SGXstudy/">SGX学习系列</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/20/someresourse/">一些CSDN干货资源</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/11/first-semester/">第一学期总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/05/hungary-algorithm/">匈牙利算法</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/05/simplex-algorithm/">单纯形法</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/30/2019-year-end-summary/">2019年终总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/08/renderandajax/">Django使用ajax后调用render前端无法跳转</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/08/docker-study/">Docker 学习笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://ctf.rookiehacker.org" title="CTF平台" target="_blank">CTF平台</a><ul></ul><a href="http://rookiehacker.coding.me" title="RookieHacker" target="_blank">RookieHacker</a><ul></ul><a href="http://www.bugku.com/" title="CTF论坛" target="_blank">CTF论坛</a><ul></ul><a href="https://virusdefender.net" title="virusdefender's blog" target="_blank">virusdefender's blog</a><ul></ul><a href="http://www.lijiejie.com/" title="李劼杰的博客" target="_blank">李劼杰的博客</a><ul></ul><a href="http://bestwing.me/" title="Swing's Blog" target="_blank">Swing's Blog</a><ul></ul><a href="https://www.bugku.com/" title="Harry's Blog" target="_blank">Harry's Blog</a><ul></ul><a href="https://rawidn.com/" title="Rawidn" target="_blank">Rawidn</a><ul></ul><a href="http://白帽黑客.com/" title="白帽黑客" target="_blank">白帽黑客</a><ul></ul><a href="http://www.hzwang.top/" title="无尘" target="_blank">无尘</a><ul></ul><a href="http://www.fjhack.me/" title="枫叶的家" target="_blank">枫叶的家</a><ul></ul><a href="https://14u9h.github.io/lib-Blog/" title="Lau9h-Paper" target="_blank">Lau9h-Paper</a><ul></ul><a href="https://boominy.github.io/" title="BooMiny" target="_blank">BooMiny</a><ul></ul><a href="https://zheyaoa.github.io" title="余雨欣的博客" target="_blank">余雨欣的博客</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/." rel="nofollow">h3h3da's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Hexo.</a><a rel="nofollow" target="_blank" href="https://beian.miit.gov.cn/"> 鲁ICP备15000385号-2.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
